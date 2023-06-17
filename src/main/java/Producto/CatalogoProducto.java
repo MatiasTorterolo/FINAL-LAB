@@ -16,7 +16,7 @@ public class CatalogoProducto {
 
     public void Mostrar(){
 
-        do {
+
             System.out.println("  Moda " + "  Hogar " + "  Tecnologia " + "  Entretenimiento " + "  Herramientas " + " Electrodomestico");
             String opcion = JOptionPane.showInputDialog("Seleccione categoria");
             switch (opcion.toLowerCase()) {
@@ -153,13 +153,13 @@ public class CatalogoProducto {
 
 
             }
-            String bucle=JOptionPane.showInputDialog("desea continuar comprando?");
+
         }
 
 
 
 
-    }
+
 
 
     public void Recorrer(Producto.Categoria.Tipo categoria, Producto.SubCategoria.SubTipo subCategoria) {
