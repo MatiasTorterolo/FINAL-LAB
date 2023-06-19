@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class UsuarioRepo implements IRepository<Usuario>{
-    private final File archivo = new File("src/main/java/archivo/Usuario.json");
+    private final File archivo = new File("src/main/java/Archivos/usuarios.json");
     private final ObjectMapper mapper = new ObjectMapper();
     private ArrayList<Usuario> Usuarios;
 

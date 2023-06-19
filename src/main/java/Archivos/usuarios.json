@@ -1,0 +1,9 @@
+[ {
+  "nombreYapellido" : "nicolas fernandez",
+  "direccion" : "av siempre viva 123",
+  "id" : 1,
+  "email" : "nicoln@gmail.com",
+  "pass" : "nicolas123",
+  "publicaciones" : null,
+  "compras" : null
+} ]

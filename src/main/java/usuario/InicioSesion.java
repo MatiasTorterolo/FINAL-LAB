@@ -22,7 +22,7 @@ public class InicioSesion {
             String mail = JOptionPane.showInputDialog("Ingrese e-mail");
             do {
                 try {
-                    if (mail.contains("@" + ".com")) {
+                    if (mail.contains("@") && mail.contains(".com")) {
                         System.out.println("e-mail valido");
                         flag = 1;
                     } else {

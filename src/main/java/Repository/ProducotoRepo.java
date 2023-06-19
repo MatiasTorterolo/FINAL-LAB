@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ProducotoRepo implements IRepository<Producto> {
-    private final File archivo = new File("src/main/java/archivo/productos.json");
+    private final File archivo = new File("src/main/java/Archivos/productos.json");
     private final ObjectMapper mapper = new ObjectMapper();
     private ArrayList<Producto> listaProductos;
 
