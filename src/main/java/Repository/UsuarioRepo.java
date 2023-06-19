@@ -7,6 +7,7 @@ import usuario.Usuario;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class UsuarioRepo implements IRepository<Usuario>{
@@ -42,7 +43,7 @@ public class UsuarioRepo implements IRepository<Usuario>{
     @Override
     public void agregar(Usuario... objeto) {
         cargar();
-        this.Usuarios.addAll(List.of(objeto));
+        this.Usuarios.addAll(Arrays.asList(objeto));
         guardar();
     }
     public void eliminar(Usuario usuario) {

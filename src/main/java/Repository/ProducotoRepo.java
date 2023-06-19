@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.type.CollectionType;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ProducotoRepo implements IRepository<Producto> {
@@ -43,7 +44,7 @@ public class ProducotoRepo implements IRepository<Producto> {
     @Override
     public void agregar(Producto... objeto) {
         cargar();
-        this.listaProductos.addAll(List.of(objeto));
+        this.listaProductos.addAll(Arrays.asList(objeto));
         guardar();
     }
     public void eliminar(Producto producto) {
