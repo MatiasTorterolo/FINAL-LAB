@@ -42,6 +42,7 @@ String bucle;
                             break;
                         case "zapatilla":
                             Recorrer(Categoria.Tipo.MODA, SubCategoria.SubTipo.ZAPATILLA);
+
                             break;
                         case "r":
                             break;
@@ -148,7 +149,7 @@ String bucle;
                     break;
                 case "herramientas":
                     for (Producto producto : this.catalogo) {
-                        if ((producto.getSubCategoria().categoria.categoria == Categoria.Tipo.HERRAMIENTAS)) {
+                        if ((producto.getSubCategoria().categoria == Categoria.Tipo.HERRAMIENTAS)) {
                             if (producto.getStock() == 0) {
                                 System.out.println(producto.toString());
                                 System.out.println("NO HAY STOCK DISPONIBLE");
@@ -204,7 +205,7 @@ String bucle;
 
 
         for (Producto producto : this.catalogo){
-            if (producto.getSubCategoria().categoria.categoria == categoria) {
+            if (producto.getSubCategoria().categoria == categoria) {
                 if (producto.getSubCategoria().subTipo == subCategoria) {
                     if(producto.getStock()==0){
                         System.out.println(producto.toString());
