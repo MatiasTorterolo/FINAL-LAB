@@ -7,6 +7,7 @@ public interface Gestiones<T> {
     void Agregar(T objeto);
     void Eliminar(T objeto);
     boolean Existe(T objeto);
-    void Modificar(Scanner scanner);
+    void Modificar(T objeto);
+    int ultimoId();
 
 }

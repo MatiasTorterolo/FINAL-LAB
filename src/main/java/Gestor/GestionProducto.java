@@ -57,18 +57,17 @@ public class GestionProducto implements Gestiones<Producto>{
 
 
 
-    public void Modificar(Scanner scanner) {
+    public void Modificar(Producto producto) {
         String bucle;
+        String input;
         do {
-            String input = JOptionPane.showInputDialog("ingrese id del producto que desea buscar:");
-            int id = Integer.parseInt(input);
-            Producto producto = productoRepo.Buscar(id);
             System.out.println(producto.toString());
             System.out.println("1: Modificar precio " + " 2: Modificar descripcion" + " 3: Modificar precio y descripcion");
-            int opcion = scanner.nextInt();
+            String opcions=JOptionPane.showInputDialog("Ingrese una opcion");
+            int opcion=Integer.parseInt(opcions);
             switch (opcion) {
                 case 1:
-                    input = JOptionPane.showInputDialog("Precio: ");
+                     input = JOptionPane.showInputDialog("Precio: ");
                     producto.setPrecio(Double.parseDouble(input));
                     break;
                 case 2:
@@ -96,7 +95,7 @@ public class GestionProducto implements Gestiones<Producto>{
         } while (bucle.equals("si"));
     }
 
-    public int ultimoProductoId() {
+    public int ultimoId() {
         int idUltimo=0;
         ArrayList<Producto> buscarUltimo = productoRepo.listar();
         if (buscarUltimo == null) {

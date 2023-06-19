@@ -1,5 +1,6 @@
 package Gestor;
 
+import Producto.Producto;
 import Repository.UsuarioRepo;
 import usuario.Usuario;
 
@@ -53,13 +54,11 @@ public class GestionUsuario {
 
 
 
-    public void Modificar(Scanner scanner) {
-            String input = JOptionPane.showInputDialog("ingrese id del producto que desea buscar:");
-            int id = Integer.parseInt(input);
-            Usuario usuario = usuarioRepo.Buscar(id);
+    public void Modificar(Usuario usuario) {
             System.out.println(usuario.toString());
             System.out.println("1: Modificar Nombre " + " 2: Modificar Direccion " + " 3: Modificar Pass" + " 4: Modificar Todo");
-            int opcion = scanner.nextInt();
+            String opcions=JOptionPane.showInputDialog("Ingrese una opcion");
+            int opcion=Integer.parseInt(opcions);
             switch (opcion) {
                 case 1:
                     usuario.setNombreYapellido(JOptionPane.showInputDialog("Nombre: "));
@@ -75,7 +74,7 @@ public class GestionUsuario {
                     usuario.setDireccion(JOptionPane.showInputDialog("Direccion: "));
                     usuario.setPass(JOptionPane.showInputDialog("Pass : "));
                     break;
-                case 0:
+                default:
                     System.out.println("Error, no existe esa opcion");
                     break;
             }
@@ -88,5 +87,18 @@ public class GestionUsuario {
             } else {
                 System.out.println("No se modifico");
             }
+    }
+
+    public int ultimoId() {
+        int idUltimo=0;
+        ArrayList<Usuario> buscarUltimo=usuarioRepo.listar();
+        if (buscarUltimo == null) {
+            return 0;
+        } else {
+            for (Usuario ultimo : buscarUltimo) {
+                idUltimo = ultimo.getId();
+            }
+            return idUltimo;
+        }
     }
 }
