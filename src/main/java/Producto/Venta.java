@@ -32,7 +32,7 @@ public class Venta {
         double Precio = Double.parseDouble(precio);
         String stock = JOptionPane.showInputDialog("Ingrese el stock del producto");
         int Stock = Integer.parseInt(stock);
-        int id = gestionProducto.ultimoProductoId() + 1;
+        int id = gestionProducto.ultimoId() + 1;
         String categoria1 = JOptionPane.showInputDialog("Seleccione categoria: Moda / Hogar / Tecnologia / Entretenimiento / Herramienta / Electrodomestico");
 
         switch (categoria1.toLowerCase()) {
