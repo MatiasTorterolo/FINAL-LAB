@@ -21,7 +21,7 @@ public class SubCategoria {
         CALEFACCION, LIMPIEZA, TELEVISION
 
     }
-    Producto.Categoria.Tipo categoria;
+    Categoria.Tipo categoria;
     SubTipo subTipo;
 
 

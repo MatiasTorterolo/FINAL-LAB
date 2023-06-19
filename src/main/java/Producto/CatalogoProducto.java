@@ -201,7 +201,7 @@ String bucle;
 
 
 
-    public void Recorrer(Producto.Categoria.Tipo categoria, Producto.SubCategoria.SubTipo subCategoria) {
+    public void Recorrer(Categoria.Tipo categoria, SubCategoria.SubTipo subCategoria) {
 
 
         for (Producto producto : this.catalogo){
