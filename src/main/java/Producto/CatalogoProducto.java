@@ -1,11 +1,13 @@
 package Producto;
 import Gestor.GestionProducto;
+import Producto.Compra.Carrito;
 import Repository.ProducotoRepo;
+import usuario.Usuario;
 
 import javax.swing.*;
 import java.util.ArrayList;
 
-public class CatalogoProducto {
+public class CatalogoProducto extends Carrito {
 
     ProducotoRepo producotoRepo=new ProducotoRepo();
     private ArrayList<Producto> catalogo=producotoRepo.listar();
@@ -14,8 +16,9 @@ public class CatalogoProducto {
     public CatalogoProducto() {
     }
 
-    public void Mostrar(){
-
+    public void Mostrar(Usuario usuario){
+String bucle;
+        do {
 
             System.out.println("  Moda " + "  Hogar " + "  Tecnologia " + "  Entretenimiento " + "  Herramientas " + " Electrodomestico");
             String opcion = JOptionPane.showInputDialog("Seleccione categoria");
@@ -50,7 +53,7 @@ public class CatalogoProducto {
 
                     break;
                 case "hogar":
-                    System.out.println(" Iluminacion " + " Cocina " + " Decoracion " + " Jardin "+ " R: retroceder ");
+                    System.out.println(" Iluminacion " + " Cocina " + " Decoracion " + " Jardin " + " R: retroceder ");
                     String hogar = JOptionPane.showInputDialog("Seleccione Categoria de Hogar");
                     switch (hogar.toLowerCase()) {
                         case "iluminacion":
@@ -76,7 +79,7 @@ public class CatalogoProducto {
                     break;
 
                 case "tecnologia":
-                    System.out.println(" Computacion " + " Celulares " + " Camaras " + " Consolas "+ " R: retroceder ");
+                    System.out.println(" Computacion " + " Celulares " + " Camaras " + " Consolas " + " R: retroceder ");
                     String tecnologia = JOptionPane.showInputDialog("Seleccione Categoria de Tecnologia");
                     switch (tecnologia.toLowerCase()) {
                         case "computacion":
@@ -101,7 +104,7 @@ public class CatalogoProducto {
                     break;
 
                 case "entretenimiento":
-                    System.out.println(" Juguete " + " Libro " + " Hobby "+ " R: retroceder ");
+                    System.out.println(" Juguete " + " Libro " + " Hobby " + " R: retroceder ");
                     String entretenimiento = JOptionPane.showInputDialog("Seleccione Categoria de Entretenimiento");
                     switch (entretenimiento.toLowerCase()) {
                         case "juguete":
@@ -123,7 +126,7 @@ public class CatalogoProducto {
                     break;
 
                 case "electrodomestico":
-                    System.out.println(" Calefaccion " + " Limpieza " + " Television "+ " R: retroceder ");
+                    System.out.println(" Calefaccion " + " Limpieza " + " Television " + " R: retroceder ");
                     String electroDomesticos = JOptionPane.showInputDialog("Seleccione Categoria de ElectroDomesticos");
                     switch (electroDomesticos.toLowerCase()) {
                         case "calefaccion":
@@ -146,14 +149,49 @@ public class CatalogoProducto {
                 case "herramientas":
                     for (Producto producto : this.catalogo) {
                         if ((producto.getSubCategoria().categoria.categoria == Categoria.Tipo.HERRAMIENTAS)) {
-                            System.out.println(producto.toString());
+                            if (producto.getStock() == 0) {
+                                System.out.println(producto.toString());
+                                System.out.println("NO HAY STOCK DISPONIBLE");
+                            } else {
+                                System.out.println(producto.toString());
+                            }
                         }
                     }
                     break;
 
 
             }
-
+            String comprar = JOptionPane.showInputDialog("Ingrese ID del producto que desea comprar. 's' para seguir comprando");
+            if (comprar.equals("s")) {
+                 bucle = "si";
+            } else {
+                bucle="no";
+                int id = Integer.parseInt(comprar);
+                Producto productoComprar = producotoRepo.Buscar(id);
+                try {
+                    if (productoComprar == null) {
+                        throw new RuntimeException("El id no pertenece a un producto en el catalogo");
+                    } else {
+                        System.out.println("Producto: " + productoComprar.toString());
+                        if (productoComprar.getStock() == 0) {
+                            System.out.println("NO HAY STOCK DISPONIBLE");
+                        } else {
+                            comprar = JOptionPane.showInputDialog("'Comprar' o 'Carrito' para agregar al carrito");
+                            if (comprar.equalsIgnoreCase("comprar")) {
+                                Comprar(usuario, productoComprar);
+                            } else if (comprar.equalsIgnoreCase("carrito")) {
+                                AgregarProductoCarrito(productoComprar);
+                            }
+                        }
+                    }
+                } catch (RuntimeException e) {
+                    System.out.println("ERROR: " + e.getMessage());
+                }
+            }
+            if(bucle.equals("no")){
+                bucle=JOptionPane.showInputDialog("Desea seguir mirando el catalogo?");
+            }
+        }while (bucle.equals("si"));
         }
 
 
@@ -168,8 +206,12 @@ public class CatalogoProducto {
         for (Producto producto : this.catalogo){
             if (producto.getSubCategoria().categoria.categoria == categoria) {
                 if (producto.getSubCategoria().subTipo == subCategoria) {
-                    System.out.println(producto.toString());
-
+                    if(producto.getStock()==0){
+                        System.out.println(producto.toString());
+                        System.out.println("NO HAY STOCK DISPONIBLE");
+                    }else {
+                        System.out.println(producto.toString());
+                    }
                 }
             }
         }
