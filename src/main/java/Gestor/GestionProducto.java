@@ -54,22 +54,14 @@ public class GestionProducto implements Gestiones<Producto>{
         }
     }
 
-    public Producto Buscar(int id) {
-        ArrayList<Producto> listaProducto = this.productoRepo.listar();
-        for (Producto productoEncontrado : listaProducto) {
-            if (productoEncontrado.getId() == id) {
-                return productoEncontrado;
-            }
-        }
-        return null;
-    }
+
 
     public void Modificar(Scanner scanner) {
         String bucle;
         do {
             String input = JOptionPane.showInputDialog("ingrese id del producto que desea buscar:");
             int id = Integer.parseInt(input);
-            Producto producto = Buscar(id);
+            Producto producto = productoRepo.Buscar(id);
             System.out.println(producto.toString());
             System.out.println("1: Modificar precio " + " 2: Modificar descripcion" + " 3: Modificar precio y descripcion");
             int opcion = scanner.nextInt();

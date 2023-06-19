@@ -1,5 +1,6 @@
 package Repository;
 
+import Producto.Producto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
 import usuario.Usuario;
@@ -63,5 +64,15 @@ public class UsuarioRepo implements IRepository<Usuario>{
             }
         }
         guardar();
+    }
+
+    public Usuario Buscar(int id) {
+        cargar();
+        for (Usuario usuarioEncontrado : Usuarios) {
+            if (usuarioEncontrado.getId() == id) {
+                return usuarioEncontrado;
+            }
+        }
+        return null;
     }
 }

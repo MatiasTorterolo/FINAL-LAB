@@ -66,6 +66,16 @@ public class ProducotoRepo implements IRepository<Producto> {
         guardar();
     }
 
+    public Producto Buscar(int id) {
+       cargar();
+        for (Producto productoEncontrado : this.listaProductos) {
+            if (productoEncontrado.getId() == id) {
+                return productoEncontrado;
+            }
+        }
+        return null;
+    }
+
 
 
 }

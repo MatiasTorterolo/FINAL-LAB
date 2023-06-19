@@ -8,5 +8,5 @@ public interface Gestiones<T> {
     void Eliminar(T objeto);
     boolean Existe(T objeto);
     void Modificar(Scanner scanner);
-    T Buscar(int id);
+
 }

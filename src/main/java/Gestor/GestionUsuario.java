@@ -51,20 +51,12 @@ public class GestionUsuario {
         }
     }
 
-    public Usuario Buscar(int id) {
-        ArrayList<Usuario> usuarios = this.usuarioRepo.listar();
-        for (Usuario usuarioEncontrado : usuarios) {
-            if (usuarioEncontrado.getId() == id) {
-                return usuarioEncontrado;
-            }
-        }
-        return null;
-    }
+
 
     public void Modificar(Scanner scanner) {
             String input = JOptionPane.showInputDialog("ingrese id del producto que desea buscar:");
             int id = Integer.parseInt(input);
-            Usuario usuario = Buscar(id);
+            Usuario usuario = usuarioRepo.Buscar(id);
             System.out.println(usuario.toString());
             System.out.println("1: Modificar Nombre " + " 2: Modificar Direccion " + " 3: Modificar Pass" + " 4: Modificar Todo");
             int opcion = scanner.nextInt();
