@@ -25,6 +25,7 @@ public class GestionProducto implements Gestiones<Producto>{
             if (Existe(objeto)) {
                 throw new RuntimeException("El Producto ya existe");
             } else {
+
                 this.productoRepo.agregar(objeto);
             }
         } catch (RuntimeException e) {
@@ -93,5 +94,18 @@ public class GestionProducto implements Gestiones<Producto>{
             }
              bucle = JOptionPane.showInputDialog("Desea modificar otro producto?");
         } while (bucle.equals("si"));
+    }
+
+    public int ultimoProductoId() {
+        int idUltimo=0;
+        ArrayList<Producto> buscarUltimo = productoRepo.listar();
+        if (buscarUltimo == null) {
+            return 0;
+        } else {
+            for (Producto ultimo : buscarUltimo) {
+                idUltimo = ultimo.getId();
+            }
+            return idUltimo;
+        }
     }
 }
