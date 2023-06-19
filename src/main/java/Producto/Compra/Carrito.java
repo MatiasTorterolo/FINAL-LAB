@@ -1,6 +1,7 @@
 package Producto.Compra;
 
 import Producto.Producto;
+import Repository.ProducotoRepo;
 import Repository.UsuarioRepo;
 import usuario.Usuario;
 
@@ -11,6 +12,7 @@ import java.util.Arrays;
 public class Carrito {
  private ArrayList<Producto> carrito=new ArrayList<>();
  private UsuarioRepo usuarioRepo=new UsuarioRepo();
+ private ProducotoRepo producotoRepo=new ProducotoRepo();
     public Carrito() {
     }
 
@@ -28,7 +30,9 @@ public class Carrito {
             String opcion= JOptionPane.showInputDialog("El producto se encuentra en el carrito. desea agregar de todas maneras?");
             try {
                 if (opcion.equals("si")) {
+                    producto.setStock(producto.getStock()-1);
                     this.carrito.add(producto);
+                    producotoRepo.Modificar(producto);
                 }else if(opcion.equals(("no"))) {
                     System.out.println("No se agrego el producto");
                 }
@@ -40,7 +44,9 @@ public class Carrito {
             }
         }
         else {
+            producto.setStock(producto.getStock()-1);
             this.carrito.add(producto);
+            producotoRepo.Modificar(producto);
         }
     }
 
@@ -53,11 +59,14 @@ public class Carrito {
 
     }
 
-    public void Comprar(Usuario usuario){
+    public void Comprar(Usuario usuario,Producto producto){
+        producto.setStock(producto.getStock()-1);
         ArrayList<Producto>comprar=usuario.getCompras();
         comprar.addAll(this.carrito);
+        comprar.add(producto);
         usuario.setCompras(comprar);
         usuarioRepo.Modificar(usuario);
+        producotoRepo.Modificar(producto);
     }
 
 
