@@ -1,17 +1,17 @@
 package Producto;
-import Gestor.GestionProducto;
-import Producto.Compra.Carrito;
 import Repository.ProducotoRepo;
+import Repository.UsuarioRepo;
 import usuario.Usuario;
 
 import javax.swing.*;
 import java.util.ArrayList;
 
-public class CatalogoProducto extends Carrito {
+public class CatalogoProducto  {
 
     ProducotoRepo producotoRepo=new ProducotoRepo();
     private ArrayList<Producto> catalogo=producotoRepo.listar();
-
+    private ArrayList<Producto> carrito=new ArrayList<>();
+    private UsuarioRepo usuarioRepo=new UsuarioRepo();
 
     public CatalogoProducto() {
     }
@@ -29,19 +29,19 @@ String bucle;
                     String ropa = JOptionPane.showInputDialog("Seleccione Categoria de Ropa");
                     switch (ropa.toLowerCase()) {
                         case "remera":
-                            Recorrer(Categoria.Tipo.MODA, SubCategoria.SubTipo.REMERA);
+                            Recorrer(Producto.Tipo.MODA, Producto.SubTipo.REMERA);
                             break;
                         case "camisa":
-                            Recorrer(Categoria.Tipo.MODA, SubCategoria.SubTipo.CAMISA);
+                            Recorrer(Producto.Tipo.MODA, Producto.SubTipo.CAMISA);
                             break;
                         case "abrigo":
-                            Recorrer(Categoria.Tipo.MODA, SubCategoria.SubTipo.ABRIGO);
+                            Recorrer(Producto.Tipo.MODA, Producto.SubTipo.ABRIGO);
                             break;
                         case "pantalon":
-                            Recorrer(Categoria.Tipo.MODA, SubCategoria.SubTipo.PANTALON);
+                            Recorrer(Producto.Tipo.MODA, Producto.SubTipo.PANTALON);
                             break;
                         case "zapatilla":
-                            Recorrer(Categoria.Tipo.MODA, SubCategoria.SubTipo.ZAPATILLA);
+                            Recorrer(Producto.Tipo.MODA, Producto.SubTipo.ZAPATILLA);
 
                             break;
                         case "r":
@@ -58,16 +58,16 @@ String bucle;
                     String hogar = JOptionPane.showInputDialog("Seleccione Categoria de Hogar");
                     switch (hogar.toLowerCase()) {
                         case "iluminacion":
-                            Recorrer(Categoria.Tipo.HOGAR, SubCategoria.SubTipo.ILUMINACION);
+                            Recorrer(Producto.Tipo.HOGAR, Producto.SubTipo.ILUMINACION);
                             break;
                         case "camisa":
-                            Recorrer(Categoria.Tipo.HOGAR, SubCategoria.SubTipo.COCINA);
+                            Recorrer(Producto.Tipo.HOGAR, Producto.SubTipo.COCINA);
                             break;
                         case "campera":
-                            Recorrer(Categoria.Tipo.HOGAR, SubCategoria.SubTipo.DECORACION);
+                            Recorrer(Producto.Tipo.HOGAR, Producto.SubTipo.DECORACION);
                             break;
                         case "pantalon":
-                            Recorrer(Categoria.Tipo.HOGAR, SubCategoria.SubTipo.JARDIN);
+                            Recorrer(Producto.Tipo.HOGAR, Producto.SubTipo.JARDIN);
                             break;
                         case "r":
                             break;
@@ -84,16 +84,16 @@ String bucle;
                     String tecnologia = JOptionPane.showInputDialog("Seleccione Categoria de Tecnologia");
                     switch (tecnologia.toLowerCase()) {
                         case "computacion":
-                            Recorrer(Categoria.Tipo.TECNOLOGIA, SubCategoria.SubTipo.COMPUTACION);
+                            Recorrer(Producto.Tipo.TECNOLOGIA, Producto.SubTipo.COMPUTACION);
                             break;
                         case "celulares":
-                            Recorrer(Categoria.Tipo.TECNOLOGIA, SubCategoria.SubTipo.CELULARES);
+                            Recorrer(Producto.Tipo.TECNOLOGIA, Producto.SubTipo.CELULARES);
                             break;
                         case "camara":
-                            Recorrer(Categoria.Tipo.TECNOLOGIA, SubCategoria.SubTipo.CAMARAS);
+                            Recorrer(Producto.Tipo.TECNOLOGIA, Producto.SubTipo.CAMARAS);
                             break;
                         case "consola":
-                            Recorrer(Categoria.Tipo.TECNOLOGIA, SubCategoria.SubTipo.CONSOLAS);
+                            Recorrer(Producto.Tipo.TECNOLOGIA, Producto.SubTipo.CONSOLAS);
                             break;
                         case "r":
                             break;
@@ -109,13 +109,13 @@ String bucle;
                     String entretenimiento = JOptionPane.showInputDialog("Seleccione Categoria de Entretenimiento");
                     switch (entretenimiento.toLowerCase()) {
                         case "juguete":
-                            Recorrer(Categoria.Tipo.ENTRETENIMIENTO, SubCategoria.SubTipo.JUGUETES);
+                            Recorrer(Producto.Tipo.ENTRETENIMIENTO, Producto.SubTipo.JUGUETES);
                             break;
                         case "libro":
-                            Recorrer(Categoria.Tipo.ENTRETENIMIENTO, SubCategoria.SubTipo.LIBROS);
+                            Recorrer(Producto.Tipo.ENTRETENIMIENTO, Producto.SubTipo.LIBROS);
                             break;
                         case "hobby":
-                            Recorrer(Categoria.Tipo.ENTRETENIMIENTO, SubCategoria.SubTipo.HOBBY);
+                            Recorrer(Producto.Tipo.ENTRETENIMIENTO, Producto.SubTipo.HOBBY);
                             break;
                         case "r":
                             break;
@@ -131,13 +131,13 @@ String bucle;
                     String electroDomesticos = JOptionPane.showInputDialog("Seleccione Categoria de ElectroDomesticos");
                     switch (electroDomesticos.toLowerCase()) {
                         case "calefaccion":
-                            Recorrer(Categoria.Tipo.ELECTRODOMESTICO, SubCategoria.SubTipo.CALEFACCION);
+                            Recorrer(Producto.Tipo.ELECTRODOMESTICO, Producto.SubTipo.CALEFACCION);
                             break;
                         case "limpieza":
-                            Recorrer(Categoria.Tipo.ELECTRODOMESTICO, SubCategoria.SubTipo.LIMPIEZA);
+                            Recorrer(Producto.Tipo.ELECTRODOMESTICO, Producto.SubTipo.LIMPIEZA);
                             break;
                         case "television":
-                            Recorrer(Categoria.Tipo.ELECTRODOMESTICO, SubCategoria.SubTipo.TELEVISION);
+                            Recorrer(Producto.Tipo.ELECTRODOMESTICO, Producto.SubTipo.TELEVISION);
                             break;
                         case "r":
                             break;
@@ -149,7 +149,7 @@ String bucle;
                     break;
                 case "herramientas":
                     for (Producto producto : this.catalogo) {
-                        if ((producto.getSubCategoria().categoria == Categoria.Tipo.HERRAMIENTAS)) {
+                        if ((producto.getCategoria() == Producto.Tipo.HERRAMIENTAS)) {
                             if (producto.getStock() == 0) {
                                 System.out.println(producto.toString());
                                 System.out.println("NO HAY STOCK DISPONIBLE");
@@ -201,12 +201,12 @@ String bucle;
 
 
 
-    public void Recorrer(Categoria.Tipo categoria, SubCategoria.SubTipo subCategoria) {
+    public void Recorrer(Producto.Tipo categoria, Producto.SubTipo subCategoria) {
 
 
         for (Producto producto : this.catalogo){
-            if (producto.getSubCategoria().categoria == categoria) {
-                if (producto.getSubCategoria().subTipo == subCategoria) {
+            if (producto.getCategoria() == categoria) {
+                if (producto.getSubCategoria() == subCategoria) {
                     if(producto.getStock()==0){
                         System.out.println(producto.toString());
                         System.out.println("NO HAY STOCK DISPONIBLE");
@@ -214,6 +214,89 @@ String bucle;
                         System.out.println(producto.toString());
                     }
                 }
+            }
+        }
+    }
+
+
+
+    public void MostrarCarrito(){
+        if(this.carrito==null){
+            System.out.println("El carrito esta vacio");
+        }
+        else {
+            this.carrito.forEach(System.out::println);
+        }
+    }
+
+    public void AgregarProductoCarrito(Producto producto){
+        if(this.carrito.contains(producto)){
+            String opcion= JOptionPane.showInputDialog("El producto se encuentra en el carrito. desea agregar de todas maneras?");
+            try {
+                if (opcion.equals("si")) {
+                    producto.setStock(producto.getStock()-1);
+                    this.carrito.add(producto);
+
+                }else if(opcion.equals(("no"))) {
+                    System.out.println("No se agrego el producto");
+                }
+                else {
+                    throw new RuntimeException("Escriba 'si' o 'no'");
+                }
+            }catch (RuntimeException e){
+                System.out.println("ERROR: "+ e.getMessage());
+            }
+        }
+        else {
+            producto.setStock(producto.getStock()-1);
+            this.carrito.add(producto);
+            System.out.println("Se agrego producto al carrito");
+        }
+    }
+
+    public void EliminarProductoCarrito(Producto producto){
+        if (this.carrito.contains(producto)){
+            this.carrito.remove(producto);
+        }else {
+            System.out.println("El producto no se encuentra en el carrito");
+        }
+
+    }
+
+    public void Comprar(Usuario usuario,Producto producto) {
+        if (usuario.getCompras() == null) {
+            ArrayList<Producto> comprar = new ArrayList<>();
+            comprar.add(producto);
+            usuario.setCompras(comprar);
+            usuarioRepo.Modificar(usuario);
+            producotoRepo.Modificar(producto);
+
+        } else {
+            producto.setStock(producto.getStock() - 1);
+            ArrayList<Producto> comprar = usuario.getCompras();
+            comprar.add(producto);
+            usuario.setCompras(comprar);
+            usuarioRepo.Modificar(usuario);
+            producotoRepo.Modificar(producto);
+        }
+        System.out.println("Productos comprado");
+    }
+
+    public void PagarCarrito(Usuario usuario){
+        if(usuario.getCompras()==null){
+            ArrayList<Producto>comprar=this.carrito;
+            usuarioRepo.Modificar(usuario);
+            for(Producto prodModificado : this.carrito){
+                producotoRepo.Modificar(prodModificado);
+            }
+
+        }else {
+            ArrayList<Producto> comprar = usuario.getCompras();
+            comprar.addAll(this.carrito);
+            usuario.setCompras(comprar);
+            usuarioRepo.Modificar(usuario);
+            for (Producto prodModificado : this.carrito) {
+                producotoRepo.Modificar(prodModificado);
             }
         }
     }
