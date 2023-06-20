@@ -7,14 +7,13 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-public class ProducotoRepo implements IRepository<Producto> {
+public class ProductoRepo implements IRepository<Producto> {
     private final File archivo = new File("src/main/java/Archivos/productos.json");
     private final ObjectMapper mapper = new ObjectMapper();
     private ArrayList<Producto> listaProductos;
 
-    public ProducotoRepo() {
+    public ProductoRepo() {
     }
 
     @Override
