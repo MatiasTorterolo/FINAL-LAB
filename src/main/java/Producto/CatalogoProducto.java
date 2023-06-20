@@ -25,7 +25,7 @@ public class CatalogoProducto  {
             switch (opcion.toLowerCase()) {
                 case "moda":
 
-                    System.out.println(" remera " + " camisa " + " pantalon " + " abrigo " + " zapatilla " + " r: retroceder ");
+                    System.out.println(" Remera " + " Camisa " + " Pantalon " + " Abrigo " + " Zapatilla " + " r: retroceder ");
                     String ropa = JOptionPane.showInputDialog("Seleccione Categoria de Ropa");
                     switch (ropa.toLowerCase()) {
                         case "remera":
@@ -54,7 +54,7 @@ public class CatalogoProducto  {
 
                     break;
                 case "hogar":
-                    System.out.println(" iluminacion " + " cocina " + " decoracion " + " jardin " + " R: retroceder ");
+                    System.out.println(" Iluminacion " + " Cocina " + " Decoracion " + " Jardin " + " r: retroceder ");
                     String hogar = JOptionPane.showInputDialog("Seleccione Categoria de Hogar");
                     switch (hogar.toLowerCase()) {
                         case "iluminacion":
@@ -80,7 +80,7 @@ public class CatalogoProducto  {
                     break;
 
                 case "tecnologia":
-                    System.out.println(" computacion " + " celulares " + " camaras " + " consolas " + " r: retroceder ");
+                    System.out.println(" Computacion " + " Celulares " + " Camaras " + " Consolas " + " r: retroceder ");
                     String tecnologia = JOptionPane.showInputDialog("Seleccione Categoria de Tecnologia");
                     switch (tecnologia.toLowerCase()) {
                         case "computacion":
@@ -105,13 +105,13 @@ public class CatalogoProducto  {
                     break;
 
                 case "entretenimiento":
-                    System.out.println(" juguete " + " libro " + " hobby " + " r: retroceder ");
+                    System.out.println(" Juguetes " + " Libros " + " Hobby " + " r: retroceder ");
                     String entretenimiento = JOptionPane.showInputDialog("Seleccione Categoria de Entretenimiento");
                     switch (entretenimiento.toLowerCase()) {
-                        case "juguete":
+                        case "juguetes":
                             Recorrer(Producto.Tipo.ENTRETENIMIENTO, Producto.SubTipo.JUGUETES);
                             break;
-                        case "libro":
+                        case "libros":
                             Recorrer(Producto.Tipo.ENTRETENIMIENTO, Producto.SubTipo.LIBROS);
                             break;
                         case "hobby":
@@ -127,7 +127,7 @@ public class CatalogoProducto  {
                     break;
 
                 case "electrodomestico":
-                    System.out.println(" calefaccion " + " limpieza " + " television " + " R: retroceder ");
+                    System.out.println(" Calefaccion " + " Limpieza " + " Television " + " R: retroceder ");
                     String electroDomesticos = JOptionPane.showInputDialog("Seleccione Categoria de ElectroDomesticos");
                     switch (electroDomesticos.toLowerCase()) {
                         case "calefaccion":
