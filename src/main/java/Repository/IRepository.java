@@ -1,8 +1,5 @@
 package Repository;
 
-import Producto.Categoria;
-import Producto.Producto;
-
 import java.util.List;
 
 public interface IRepository<T> {

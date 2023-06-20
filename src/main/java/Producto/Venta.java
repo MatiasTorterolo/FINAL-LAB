@@ -1,11 +1,8 @@
 package Producto;
 
 import Gestor.GestionProducto;
-import Gestor.GestionUsuario;
-import Producto.Producto;
 import Repository.UsuarioRepo;
 import usuario.Usuario;
-import Producto.Categoria;
 
 
 import javax.swing.*;
@@ -16,8 +13,6 @@ public class Venta {
     GestionProducto gestionProducto = new GestionProducto();
     UsuarioRepo usuarioRepo=new UsuarioRepo();
     ArrayList<Producto> ventas = new ArrayList<>();
-    SubCategoria subCategoria = new SubCategoria();
-    Categoria categoria = new Categoria();
 
     public Venta() {
     }
@@ -27,7 +22,7 @@ public class Venta {
         Producto producto=new Producto();
         String nombreProducto = JOptionPane.showInputDialog("Ingrese nombre del producto");
         String Marca = JOptionPane.showInputDialog("Ingrese marca del producto");
-        String descripcion = JOptionPane.showInputDialog("Coloque descripcion del producto. si el ropa colore talle, genero y color");
+        String descripcion = JOptionPane.showInputDialog("Coloque descripcion del producto. si es moda color talle y genero");
         String precio = JOptionPane.showInputDialog("Ingrese precio");
         double Precio = Double.parseDouble(precio);
         String stock = JOptionPane.showInputDialog("Ingrese el stock del producto");
@@ -37,53 +32,45 @@ public class Venta {
 
         switch (categoria1.toLowerCase()) {
             case "moda":
-                subCategoria.categoria = Categoria.Tipo.MODA;
+                producto.setCategoria(Producto.Tipo.MODA);
                 String subCategoria1 = JOptionPane.showInputDialog("Seleccione SubCategoria: Remera / Camisa / Pantalon / Zapatilla / Abrigo");
                 switch (subCategoria1.toLowerCase()) {
                     case "remera":
-                        subCategoria.subTipo = SubCategoria.SubTipo.REMERA;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.REMERA);
                         break;
                     case "camisa":
-                        subCategoria.subTipo = SubCategoria.SubTipo.CAMISA;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.CAMISA);
                         break;
                     case "pantalon":
-                        subCategoria.subTipo = SubCategoria.SubTipo.PANTALON;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.PANTALON);
                         break;
                     case "zapatilla":
-                        subCategoria.subTipo = SubCategoria.SubTipo.ZAPATILLA;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.ZAPATILLA);
                         break;
                     case "abrigo":
-                        subCategoria.subTipo = SubCategoria.SubTipo.ABRIGO;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.ABRIGO);
                         break;
                     default:
                         System.out.println("ERROR: ESCOJA UNA DE LAS CATEGORIAS MOSTRADAS ");
                         break;
                 }
+                break;
 
             case "hogar": {
-                subCategoria.categoria = Categoria.Tipo.HOGAR;
+                producto.setCategoria(Producto.Tipo.HOGAR);
                 subCategoria1 = JOptionPane.showInputDialog("Seleccione SubCategoria: Iluminacion / Cocina / Decoracion / Jardin");
                 switch (subCategoria1.toLowerCase()) {
                     case "iluminacion":
-                        subCategoria.subTipo = SubCategoria.SubTipo.ILUMINACION;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.ILUMINACION);
                         break;
                     case "cocina":
-                        subCategoria.subTipo = SubCategoria.SubTipo.COCINA;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.COCINA);
                         break;
                     case "decoracion":
-                        subCategoria.subTipo = SubCategoria.SubTipo.DECORACION;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.DECORACION);
                         break;
                     case "jardin":
-                        subCategoria.subTipo = SubCategoria.SubTipo.JARDIN;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.JARDIN);
                         break;
 
                     default:
@@ -94,24 +81,20 @@ public class Venta {
             }
             case "tecnologia": {
 
-                subCategoria.categoria = Categoria.Tipo.TECNOLOGIA;
+                producto.setCategoria(Producto.Tipo.TECNOLOGIA);
                 subCategoria1 = JOptionPane.showInputDialog("Seleccione SubCategoria: Computacion / Celulares / Camaras / Consolas ");
                 switch (subCategoria1.toLowerCase()) {
                     case "computacion":
-                        subCategoria.subTipo = SubCategoria.SubTipo.COMPUTACION;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.COMPUTACION);
                         break;
                     case "celulares":
-                        subCategoria.subTipo = SubCategoria.SubTipo.CELULARES;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.CELULARES);
                         break;
                     case "camaras":
-                        subCategoria.subTipo = SubCategoria.SubTipo.CAMARAS;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.CAMARAS);
                         break;
                     case "consolas":
-                        subCategoria.subTipo = SubCategoria.SubTipo.CONSOLAS;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.CONSOLAS);
                         break;
 
                     default:
@@ -121,20 +104,17 @@ public class Venta {
                 break;
             }
             case "entretenimiento": {
-                subCategoria.categoria = Categoria.Tipo.ENTRETENIMIENTO;
+                producto.setCategoria(Producto.Tipo.ENTRETENIMIENTO);
                 subCategoria1 = JOptionPane.showInputDialog("Seleccione SubCategoria: Juguetes / Libros / Hobby ");
                 switch (subCategoria1.toLowerCase()) {
                     case "juguetes":
-                        subCategoria.subTipo = SubCategoria.SubTipo.JUGUETES;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.JUGUETES);
                         break;
                     case "libros":
-                        subCategoria.subTipo = SubCategoria.SubTipo.LIBROS;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.LIBROS);
                         break;
                     case "hobby":
-                        subCategoria.subTipo = SubCategoria.SubTipo.HOBBY;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.HOBBY);
                         break;
 
                     default:
@@ -145,20 +125,17 @@ public class Venta {
 
             }
             case "electrodomestico": {
-                subCategoria.categoria = Categoria.Tipo.ELECTRODOMESTICO;
+                producto.setCategoria(Producto.Tipo.ELECTRODOMESTICO);
                 subCategoria1 = JOptionPane.showInputDialog("Seleccione SubCategoria: Calefaccion / Limpieza / Television ");
                 switch (subCategoria1.toLowerCase()) {
                     case "calefaccion":
-                        subCategoria.subTipo = SubCategoria.SubTipo.CALEFACCION;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.CALEFACCION);
                         break;
                     case "limpieza":
-                        subCategoria.subTipo = SubCategoria.SubTipo.LIMPIEZA;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.LIMPIEZA);
                         break;
                     case "television":
-                        subCategoria.subTipo = SubCategoria.SubTipo.TELEVISION;
-                        producto.setSubCategoria(subCategoria);
+                        producto.setSubCategoria(Producto.SubTipo.TELEVISION);
                         break;
 
                     default:
@@ -169,7 +146,7 @@ public class Venta {
 
             }
             case "herramienta": {
-                subCategoria.categoria = Categoria.Tipo.HERRAMIENTAS;
+                producto.setCategoria(Producto.Tipo.HERRAMIENTAS);
                 break;
             }
 
