@@ -63,11 +63,24 @@ public class Main {
                                     break;
                                 case 6:
                                     catalogoProducto.MostrarCarrito();
-                                    opcions=JOptionPane.showInputDialog("Desea comprar");
-                                    if(opcions.equalsIgnoreCase("si")){
-                                        catalogoProducto.PagarCarrito(usuario);
-                                        System.out.println("Productos comprados");
-                                    }
+                                    opcions=JOptionPane.showInputDialog("Desea Eliminar producto del carrito?");
+
+                                        if (opcions.equalsIgnoreCase("si")) {
+                                            do{
+                                            input = JOptionPane.showInputDialog("Ingrese id del producto que desea eliminar");
+                                            id = Integer.parseInt(input);
+                                            catalogoProducto.EliminarProductoCarrito(producotoRepo.Buscar(id));
+                                            catalogoProducto.MostrarCarrito();
+                                            bucle = JOptionPane.showInputDialog("desea eliminar otro producto");
+                                        }while (bucle.equalsIgnoreCase("si"));
+                                        }
+
+                                            opcions = JOptionPane.showInputDialog("Desea comprar");
+                                            if (opcions.equalsIgnoreCase("si")) {
+                                                catalogoProducto.PagarCarrito(usuario);
+                                                System.out.println("Productos comprados");
+                                            }
+
                                     break;
                                 case 7:
                                     inicioSesion.ModificarUsuario(usuario);

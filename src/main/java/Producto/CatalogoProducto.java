@@ -257,10 +257,10 @@ String bucle;
     public void EliminarProductoCarrito(Producto producto){
         if (this.carrito.contains(producto)){
             this.carrito.remove(producto);
+            System.out.println("Producto eliminado");
         }else {
             System.out.println("El producto no se encuentra en el carrito");
         }
-
     }
 
     public void Comprar(Usuario usuario,Producto producto) {
