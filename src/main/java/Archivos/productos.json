@@ -1,13 +1,4 @@
 [ {
-  "nombreProducto" : "moto E13",
-  "marca" : "motorola",
-  "descripcion" : "2 gb ram, memoria internar 64, pantalla 6.5",
-  "precio" : 46176.0,
-  "subCategoria" : "CELULARES",
-  "categoria" : "TECNOLOGIA",
-  "id" : 1,
-  "stock" : 10
-}, {
   "nombreProducto" : "campera thor navy",
   "marca" : "navy",
   "descripcion" : "campera negra talle L, masculina",

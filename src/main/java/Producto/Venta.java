@@ -168,16 +168,14 @@ public class Venta {
 
 
     public void EliminarPublicacion(Usuario usuario, Producto producto) {
-        gestionProducto.Eliminar(producto);
-        usuario.getPublicaciones().remove(producto);
-        this.ventas=usuario.getPublicaciones();
-        usuario.setPublicaciones(this.ventas);
-        usuarioRepo.Modificar(usuario);
+            gestionProducto.Eliminar(producto);
+            usuario.getPublicaciones().remove(producto);
+            this.ventas = usuario.getPublicaciones();
+            usuario.setPublicaciones(this.ventas);
+            usuarioRepo.Modificar(usuario);
     }
 
-    public void MostrarPublicaciones(Usuario usuario){
-        usuario.getPublicaciones().forEach(System.out::println);
-    }
+    public void MostrarPublicaciones(Usuario usuario){usuario.getPublicaciones().forEach(System.out::println);}
 
 
 }
