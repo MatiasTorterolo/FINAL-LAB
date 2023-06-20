@@ -1,15 +1,14 @@
 package Gestor;
 
 import Producto.Producto;
-import Repository.ProducotoRepo;
+import Repository.ProductoRepo;
 
 
 import javax.swing.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class GestionProducto implements Gestiones<Producto>{
-    ProducotoRepo productoRepo = new ProducotoRepo();
+    ProductoRepo productoRepo = new ProductoRepo();
 
     public GestionProducto() {
     }

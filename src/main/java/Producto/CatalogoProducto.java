@@ -1,5 +1,5 @@
 package Producto;
-import Repository.ProducotoRepo;
+import Repository.ProductoRepo;
 import Repository.UsuarioRepo;
 import usuario.Usuario;
 
@@ -8,16 +8,16 @@ import java.util.ArrayList;
 
 public class CatalogoProducto  {
 
-    ProducotoRepo producotoRepo=new ProducotoRepo();
-    private ArrayList<Producto> catalogo=producotoRepo.listar();
-    private ArrayList<Producto> carrito=new ArrayList<>();
-    private UsuarioRepo usuarioRepo=new UsuarioRepo();
+    ProductoRepo ProductoRepo = new ProductoRepo();
+    private ArrayList<Producto> catalogo = ProductoRepo.listar();
+    private ArrayList<Producto> carrito = new ArrayList<>();
+    private UsuarioRepo usuarioRepo = new UsuarioRepo();
 
     public CatalogoProducto() {
     }
 
     public void Mostrar(Usuario usuario){
-String bucle;
+    String bucle;
         do {
 
             System.out.println("  Moda " + "  Hogar " + "  Tecnologia " + "  Entretenimiento " + "  Herramientas " + " Electrodomestico");
@@ -25,7 +25,7 @@ String bucle;
             switch (opcion.toLowerCase()) {
                 case "moda":
 
-                    System.out.println(" Remera " + " Camisa " + " Pantalon " + " Abrigo " + " Zapatilla " + " R: retroceder ");
+                    System.out.println(" remera " + " camisa " + " pantalon " + " abrigo " + " zapatilla " + " r: retroceder ");
                     String ropa = JOptionPane.showInputDialog("Seleccione Categoria de Ropa");
                     switch (ropa.toLowerCase()) {
                         case "remera":
@@ -54,19 +54,19 @@ String bucle;
 
                     break;
                 case "hogar":
-                    System.out.println(" Iluminacion " + " Cocina " + " Decoracion " + " Jardin " + " R: retroceder ");
+                    System.out.println(" iluminacion " + " cocina " + " decoracion " + " jardin " + " R: retroceder ");
                     String hogar = JOptionPane.showInputDialog("Seleccione Categoria de Hogar");
                     switch (hogar.toLowerCase()) {
                         case "iluminacion":
                             Recorrer(Producto.Tipo.HOGAR, Producto.SubTipo.ILUMINACION);
                             break;
-                        case "camisa":
+                        case "cocina":
                             Recorrer(Producto.Tipo.HOGAR, Producto.SubTipo.COCINA);
                             break;
-                        case "campera":
+                        case "decoracion":
                             Recorrer(Producto.Tipo.HOGAR, Producto.SubTipo.DECORACION);
                             break;
-                        case "pantalon":
+                        case "jardin":
                             Recorrer(Producto.Tipo.HOGAR, Producto.SubTipo.JARDIN);
                             break;
                         case "r":
@@ -80,7 +80,7 @@ String bucle;
                     break;
 
                 case "tecnologia":
-                    System.out.println(" Computacion " + " Celulares " + " Camaras " + " Consolas " + " R: retroceder ");
+                    System.out.println(" computacion " + " celulares " + " camaras " + " consolas " + " r: retroceder ");
                     String tecnologia = JOptionPane.showInputDialog("Seleccione Categoria de Tecnologia");
                     switch (tecnologia.toLowerCase()) {
                         case "computacion":
@@ -105,7 +105,7 @@ String bucle;
                     break;
 
                 case "entretenimiento":
-                    System.out.println(" Juguete " + " Libro " + " Hobby " + " R: retroceder ");
+                    System.out.println(" juguete " + " libro " + " hobby " + " r: retroceder ");
                     String entretenimiento = JOptionPane.showInputDialog("Seleccione Categoria de Entretenimiento");
                     switch (entretenimiento.toLowerCase()) {
                         case "juguete":
@@ -127,7 +127,7 @@ String bucle;
                     break;
 
                 case "electrodomestico":
-                    System.out.println(" Calefaccion " + " Limpieza " + " Television " + " R: retroceder ");
+                    System.out.println(" calefaccion " + " limpieza " + " television " + " R: retroceder ");
                     String electroDomesticos = JOptionPane.showInputDialog("Seleccione Categoria de ElectroDomesticos");
                     switch (electroDomesticos.toLowerCase()) {
                         case "calefaccion":
@@ -168,7 +168,7 @@ String bucle;
             } else {
                 bucle="no";
                 int id = Integer.parseInt(comprar);
-                Producto productoComprar = producotoRepo.Buscar(id);
+                Producto productoComprar = ProductoRepo.Buscar(id);
                 try {
                     if (productoComprar == null) {
                         throw new RuntimeException("El id no pertenece a un producto en el catalogo");
@@ -269,7 +269,7 @@ String bucle;
             comprar.add(producto);
             usuario.setCompras(comprar);
             usuarioRepo.Modificar(usuario);
-            producotoRepo.Modificar(producto);
+            ProductoRepo.Modificar(producto);
 
         } else {
             producto.setStock(producto.getStock() - 1);
@@ -277,7 +277,7 @@ String bucle;
             comprar.add(producto);
             usuario.setCompras(comprar);
             usuarioRepo.Modificar(usuario);
-            producotoRepo.Modificar(producto);
+            ProductoRepo.Modificar(producto);
         }
         System.out.println("Productos comprado");
     }
@@ -287,7 +287,7 @@ String bucle;
             ArrayList<Producto>comprar=this.carrito;
             usuarioRepo.Modificar(usuario);
             for(Producto prodModificado : this.carrito){
-                producotoRepo.Modificar(prodModificado);
+                ProductoRepo.Modificar(prodModificado);
             }
 
         }else {
@@ -296,7 +296,7 @@ String bucle;
             usuario.setCompras(comprar);
             usuarioRepo.Modificar(usuario);
             for (Producto prodModificado : this.carrito) {
-                producotoRepo.Modificar(prodModificado);
+                ProductoRepo.Modificar(prodModificado);
             }
         }
     }

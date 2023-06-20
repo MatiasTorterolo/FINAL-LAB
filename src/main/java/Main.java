@@ -1,7 +1,7 @@
 import Producto.CatalogoProducto;
 import Producto.Producto;
 import Producto.Venta;
-import Repository.ProducotoRepo;
+import Repository.ProductoRepo;
 import usuario.InicioSesion;
 import usuario.Usuario;
 
@@ -13,7 +13,7 @@ public class Main {
         CatalogoProducto catalogoProducto = new CatalogoProducto();
         Venta venta = new Venta();
 
-        ProducotoRepo producotoRepo = new ProducotoRepo();
+        ProductoRepo producotoRepo = new ProductoRepo();
         String bucle = null;
         int flag = 0;
         Usuario usuario = new Usuario();

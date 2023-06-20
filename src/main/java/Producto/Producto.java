@@ -38,6 +38,9 @@ public class Producto implements Serializable {
         ENTRETENIMIENTO,
         HERRAMIENTAS,
         ELECTRODOMESTICO,
+        ;
+
+
     }
 
     //region constructor
