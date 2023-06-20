@@ -1,9 +1,78 @@
 [ {
-  "nombreYapellido" : "nicolas fernandez",
-  "direccion" : "av siempre viva 123",
+  "nombreYapellido" : "rocky balboa",
+  "direccion" : "brooklin",
   "id" : 1,
-  "email" : "nicoln@gmail.com",
-  "pass" : "nicolas123",
-  "publicaciones" : null,
+  "email" : "rock@gmail.com",
+  "pass" : "balboa321",
+  "publicaciones" : [ {
+    "nombreProducto" : "moto E13",
+    "marca" : "motorola",
+    "descripcion" : "2 gb ram, memoria internar 64, pantalla 6.5",
+    "precio" : 46176.0,
+    "subCategoria" : "CELULARES",
+    "categoria" : "TECNOLOGIA",
+    "id" : 1,
+    "stock" : 12
+  } ],
   "compras" : null
+}, {
+  "nombreYapellido" : "pepe argento",
+  "direccion" : "nomeacuerdo 432",
+  "id" : 2,
+  "email" : "casados@gmail.com",
+  "pass" : "casados123",
+  "publicaciones" : null,
+  "compras" : [ {
+    "nombreProducto" : "moto E13",
+    "marca" : "motorola",
+    "descripcion" : "2 gb ram, memoria internar 64, pantalla 6.5",
+    "precio" : 46176.0,
+    "subCategoria" : "CELULARES",
+    "categoria" : "TECNOLOGIA",
+    "id" : 1,
+    "stock" : 11
+  } ]
+}, {
+  "nombreYapellido" : "carcacha nelson",
+  "direccion" : "luro por ahi",
+  "id" : 3,
+  "email" : "mati@gmail.com",
+  "pass" : "mati123",
+  "publicaciones" : [ {
+    "nombreProducto" : "campera thor navy",
+    "marca" : "navy",
+    "descripcion" : "campera negra talle L, masculina",
+    "precio" : 57990.0,
+    "subCategoria" : "REMERA",
+    "categoria" : "MODA",
+    "id" : 2,
+    "stock" : 4
+  } ],
+  "compras" : [ ]
+}, {
+  "nombreYapellido" : "francias segundo",
+  "direccion" : "pechofrio 432",
+  "id" : 4,
+  "email" : "segundo@gmail.com",
+  "pass" : "francia123",
+  "publicaciones" : [ ],
+  "compras" : [ {
+    "nombreProducto" : "campera thor navy",
+    "marca" : "navy",
+    "descripcion" : "campera negra talle L, masculina",
+    "precio" : 57990.0,
+    "subCategoria" : "REMERA",
+    "categoria" : "MODA",
+    "id" : 2,
+    "stock" : 3
+  }, {
+    "nombreProducto" : "moto E13",
+    "marca" : "motorola",
+    "descripcion" : "2 gb ram, memoria internar 64, pantalla 6.5",
+    "precio" : 46176.0,
+    "subCategoria" : "CELULARES",
+    "categoria" : "TECNOLOGIA",
+    "id" : 1,
+    "stock" : 10
+  } ]
 } ]

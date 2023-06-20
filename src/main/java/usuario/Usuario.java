@@ -2,18 +2,19 @@ package usuario;
 
 import Producto.Producto;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public  class Usuario {
+public  class Usuario implements Serializable {
     private String nombreYapellido;
     private String direccion;
     private int id;
     private String email;
     private String pass;
 
-    private ArrayList<Producto> publicaciones;
-    private ArrayList<Producto> compras;
+    private ArrayList<Producto> publicaciones=new ArrayList<>();
+    private ArrayList<Producto> compras=new ArrayList<>();
 
 
 
@@ -93,9 +94,10 @@ public  class Usuario {
     @Override
     public String toString() {
         return "Usuario{" +
-                "nombre Y apellido='" + nombreYapellido + '\'' +
-                ", id=" + id +
-                ", email='" + email + '\'' +
+                " id=" + id +
+                ", Nombre Y Apellido='" + nombreYapellido + '\'' +
+                ", Direccion='" + direccion + '\'' +
+                ", e-mail='" + email + '\'' +
                 '}';
     }
 

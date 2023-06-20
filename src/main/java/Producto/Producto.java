@@ -1,27 +1,57 @@
 package Producto;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Producto {
+public class Producto implements Serializable {
     private String nombreProducto;
     private String marca;
     private String descripcion;
     private double precio;
-
-    private SubCategoria subCategoria;
+    private SubTipo subCategoria;
+    private Tipo categoria;
     private int id;
     private int stock;
 
+    enum SubTipo {
+        //MODA
+        REMERA, CAMISA, PANTALON, ZAPATILLA, ABRIGO,
+
+        //HOGAR
+        ILUMINACION, COCINA, DECORACION, JARDIN,
+
+        //TECNOLOGIA
+        COMPUTACION, CELULARES, CAMARAS, CONSOLAS,
+
+        //ENTRETENIMIENTO
+        JUGUETES,LIBROS,HOBBY,
+
+        //ELECTRODOMESTICO
+        CALEFACCION, LIMPIEZA, TELEVISION
+
+    }
+
+    enum Tipo{
+        MODA,
+        HOGAR,
+        TECNOLOGIA,
+        ENTRETENIMIENTO,
+        HERRAMIENTAS,
+        ELECTRODOMESTICO,
+    }
+
     //region constructor
 
-    public Producto(String nombreProducto, String marca, String descripcion, double precio,SubCategoria categoria,int id,int stock) {
+
+    public Producto(String nombreProducto, String marca, String descripcion, double precio, SubTipo subCategoria, Tipo categoria, int id, int stock) {
         this.nombreProducto = nombreProducto;
         this.marca = marca;
         this.descripcion = descripcion;
         this.precio = precio;
-        this.subCategoria = categoria;
-        this.id=id;
-        this.stock=stock;
+        this.subCategoria = subCategoria;
+        this.categoria = categoria;
+        this.id = id;
+        this.stock = stock;
     }
 
     public Producto() {
@@ -78,21 +108,30 @@ public class Producto {
         this.precio = precio;
     }
 
-    public SubCategoria getSubCategoria() {
-        return this.subCategoria;
+    public SubTipo getSubCategoria() {
+        return subCategoria;
     }
 
-    public void setSubCategoria(SubCategoria categoria) {
-        this.subCategoria = categoria;
+    public void setSubCategoria(SubTipo subCategoria) {
+        this.subCategoria = subCategoria;
     }
 
-    //endregion
+    public Tipo getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Tipo categoria) {
+        this.categoria = categoria;
+    }
+
+//endregion
 
 
     @Override
     public String toString() {
         return "Producto{" +
-                "nombreProducto='" + nombreProducto + '\'' +
+                "ID='" + id + '\'' +
+                ", nombreProducto='" + nombreProducto + '\'' +
                 ", marca='" + marca + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", precio=" + precio +
