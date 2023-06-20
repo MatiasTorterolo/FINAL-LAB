@@ -9,17 +9,17 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        InicioSesion inicioSesion=new InicioSesion();
-        CatalogoProducto catalogoProducto=new CatalogoProducto();
-        Venta venta=new Venta();
+        InicioSesion inicioSesion = new InicioSesion();
+        CatalogoProducto catalogoProducto = new CatalogoProducto();
+        Venta venta = new Venta();
 
-        ProducotoRepo producotoRepo=new ProducotoRepo();
-        String bucle=null;
-        int flag=0;
-        Usuario usuario=new Usuario();
+        ProducotoRepo producotoRepo = new ProducotoRepo();
+        String bucle = null;
+        int flag = 0;
+        Usuario usuario = new Usuario();
         do {
-            String opcions = JOptionPane.showInputDialog("1:Iniciar sesion     2:Registrarse");
-            int opcion = Integer.parseInt(opcions);
+            String opciones = JOptionPane.showInputDialog("1:Iniciar sesion     2:Registrarse");
+            int opcion = Integer.parseInt(opciones);
             switch (opcion) {
                 case 1:
                     String mail = JOptionPane.showInputDialog("INGRESE E-MAIL");
@@ -31,8 +31,8 @@ public class Main {
                         System.out.println("BIENVENIDO " + usuario.getNombreYapellido());
                         do {
 
-                            opcions = JOptionPane.showInputDialog("1: Ver productos    2: Publicar Producto    3:Mostrar Productos publicados     4:Historial de compras       5:Eliminar publicacion       6:Ir a carrito      7:Modificar datos de perfil       8:Ver perfil     0:Cerrar sesion ");
-                            opcion = Integer.parseInt(opcions);
+                            opciones = JOptionPane.showInputDialog("1: Ver productos    2: Publicar Producto    3:Mostrar Productos publicados     4:Historial de compras       5:Eliminar publicacion       6:Ir a carrito      7:Modificar datos de perfil       8:Ver perfil     0:Cerrar sesion ");
+                            opcion = Integer.parseInt(opciones);
                             switch (opcion) {
                                 case 1:
                                     catalogoProducto.Mostrar(usuario);
@@ -63,9 +63,9 @@ public class Main {
                                     break;
                                 case 6:
                                     catalogoProducto.MostrarCarrito();
-                                    opcions=JOptionPane.showInputDialog("Desea Eliminar producto del carrito?");
+                                    opciones=JOptionPane.showInputDialog("Desea Eliminar producto del carrito?");
 
-                                        if (opcions.equalsIgnoreCase("si")) {
+                                        if (opciones.equalsIgnoreCase("si")) {
                                             do{
                                             input = JOptionPane.showInputDialog("Ingrese id del producto que desea eliminar");
                                             id = Integer.parseInt(input);
@@ -75,8 +75,8 @@ public class Main {
                                         }while (bucle.equalsIgnoreCase("si"));
                                         }
 
-                                            opcions = JOptionPane.showInputDialog("Desea comprar");
-                                            if (opcions.equalsIgnoreCase("si")) {
+                                            opciones = JOptionPane.showInputDialog("Desea comprar");
+                                            if (opciones.equalsIgnoreCase("si")) {
                                                 catalogoProducto.PagarCarrito(usuario);
                                                 System.out.println("Productos comprados");
                                             }
