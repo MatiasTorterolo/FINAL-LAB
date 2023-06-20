@@ -4,16 +4,7 @@
   "id" : 1,
   "email" : "rock@gmail.com",
   "pass" : "balboa321",
-  "publicaciones" : [ {
-    "nombreProducto" : "moto E13",
-    "marca" : "motorola",
-    "descripcion" : "2 gb ram, memoria internar 64, pantalla 6.5",
-    "precio" : 46176.0,
-    "subCategoria" : "CELULARES",
-    "categoria" : "TECNOLOGIA",
-    "id" : 1,
-    "stock" : 12
-  } ],
+  "publicaciones" : [ ],
   "compras" : null
 }, {
   "nombreYapellido" : "pepe argento",

@@ -51,14 +51,18 @@ public class Main {
                                     }
                                     break;
                                 case 5:
-                                    venta.MostrarPublicaciones(usuario);
-                                    String input = JOptionPane.showInputDialog("Ingrese id del producto que desea eliminar");
-                                    int id = Integer.parseInt(input);
-                                    Producto productoElim = producotoRepo.Buscar(id);
-                                    String seguro = JOptionPane.showInputDialog(productoElim.toString() + " ESTA SEGURO QUE DESEA ELIMINAR?");
-                                    if (seguro.equalsIgnoreCase("si")) {
-                                        venta.EliminarPublicacion(usuario, productoElim);
-                                        System.out.println("Publicacion eliminado");
+                                    if(usuario.getPublicaciones()==null){
+                                        System.out.println("NO SE REGISTRAN PUBLICACIONES");
+                                    }else {
+                                        venta.MostrarPublicaciones(usuario);
+                                        String input = JOptionPane.showInputDialog("Ingrese id del producto que desea eliminar");
+                                        int id = Integer.parseInt(input);
+                                        Producto productoElim = producotoRepo.Buscar(id);
+                                        String seguro = JOptionPane.showInputDialog(productoElim.toString() + " ESTA SEGURO QUE DESEA ELIMINAR?");
+                                        if (seguro.equalsIgnoreCase("si")) {
+                                            venta.EliminarPublicacion(usuario, productoElim);
+                                            System.out.println("Publicacion eliminado");
+                                        }
                                     }
                                     break;
                                 case 6:
@@ -67,8 +71,8 @@ public class Main {
 
                                         if (opciones.equalsIgnoreCase("si")) {
                                             do{
-                                            input = JOptionPane.showInputDialog("Ingrese id del producto que desea eliminar");
-                                            id = Integer.parseInt(input);
+                                            String input = JOptionPane.showInputDialog("Ingrese id del producto que desea eliminar");
+                                            int id = Integer.parseInt(input);
                                             catalogoProducto.EliminarProductoCarrito(producotoRepo.Buscar(id));
                                             catalogoProducto.MostrarCarrito();
                                             bucle = JOptionPane.showInputDialog("desea eliminar otro producto");
@@ -108,7 +112,7 @@ public class Main {
                     inicioSesion.Registro();
                     break;
             }
-             bucle=JOptionPane.showInputDialog("Desea continuar?...");
+             bucle=JOptionPane.showInputDialog("Desea continuar en el inicio de sesion?...");
         }while (bucle.equalsIgnoreCase("si"));
     }
 }
