@@ -31,7 +31,6 @@ public class Main {
                     } else {
                         System.out.println("BIENVENIDO " + usuario.getNombreYapellido());
                         do {
-
                             opciones = JOptionPane.showInputDialog("1: Ver productos    2: Publicar Producto    3:Mostrar Productos publicados     4:Historial de compras       5:Eliminar publicacion       6:Ir a carrito      7:Modificar datos de perfil       8:Ver perfil     0:Cerrar sesion ");
                             opcion = Integer.parseInt(opciones);
                             switch (opcion) {
