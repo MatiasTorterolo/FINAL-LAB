@@ -75,4 +75,12 @@
     "id" : 1,
     "stock" : 10
   } ]
-}]
+}, {
+  "nombreYapellido" : "Fernando Aguirre",
+  "direccion" : "Pasteur 150",
+  "id" : 5,
+  "email" : "Fer123@gmail.com",
+  "pass" : "fernando500",
+  "publicaciones" : [ ],
+  "compras" : [ ]
+} ]
