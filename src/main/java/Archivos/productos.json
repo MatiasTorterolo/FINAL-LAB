@@ -16,4 +16,211 @@
   "categoria" : "MODA",
   "id" : 2,
   "stock" : 90
-} ]
+}, {
+  "nombreProducto" : "Jean" ,
+  "marca" : "Levis",
+  "descripcion" : "Jean azul talle 40, masculino",
+  "precio" : 410000,
+  "subCategoria" : "PANTALON",
+  "categoria" : "MODA",
+  "id" : 100,
+  "stock" : 20
+}, {
+  "nombreProducto" : "Remera",
+  "marca" : "Levis",
+  "descripcion" : "Remera blanca talle L, masculina",
+  "precio" : "12000",
+  "subCategoria" : "REMERA",
+  "categoria" : "MODA",
+  "id" : 101,
+  "stock" : 39
+}, {
+  "nombreProducto" : "Zapatillas",
+  "marca" : "Nike",
+  "descripcion" : "Zapatillas blancas talle 40, masculinas",
+  "precio" : 50000,
+  "subCategoria" : "ZAPATILLAS",
+  "categoria" : "MODA",
+  "id" : 102,
+  "stock" : 10
+}, {
+  "nombreProducto" : "Moto g42",
+  "marca" : "Motorola",
+  "descripcion" : "2 gb ram, memoria internar 64, pantalla 6.5",
+  "precio" : 80000,
+  "subCategoria" : "CELULARES",
+  "categoria" : "TECNOLOGIA",
+  "id" : 103,
+  "stock" : 41
+}, {
+  "nombreProducto" : "IPhone 12",
+  "marca" : "Apple",
+  "descripcion" : "4 gb ram, memoria internar 512, pantalla 6",
+  "precio" : 300000,
+  "subCategoria" : "CELULARES",
+  "categoria" : "TECNOLOGIA",
+  "id" : 104,
+  "stock" : 106
+}, {
+  "nombreProducto" : "Camara",
+  "marca" : "Canon",
+  "descripcion" : "Camara profesional, 20 megapixeles",
+  "precio" : 100000,
+  "subCategoria" : "CAMARA",
+  "categoria" : "TECNOLOGIA",
+  "id" : 105,
+  "stock" : 10
+}, {
+  "nombreProducto" : "Play Station 5",
+  "marca" : "Sony",
+  "descripcion" : "Play station 5, 1 tb, 4k",
+  "precio" : 400000,
+  "subCategoria" : "CONSOLA",
+  "categoria" : "TECNOLOGIA",
+  "id" : 106,
+  "stock" : 15
+}, {
+  "nombreProducto" : "Play Station 4",
+  "marca" : "Sony",
+  "descripcion" : "Play station 4, 500 gb, HD",
+  "precio" : 150000,
+  "subCategoria" : "CONSOLA",
+  "categoria" : "TECNOLOGIA",
+  "id" : 107,
+  "stock" : 80
+}, {
+  "nombreProducto" : "Mouse Logitech g203",
+  "marca" : "Logitech",
+  "descripcion" : "Mouse gamer, 6 botones, 8000 dpi",
+  "precio" : 15000,
+  "subCategoria" : "COMPUTACION",
+  "categoria" : "TECNOLOGIA",
+  "id" : 108,
+  "stock" : 20
+}, {
+  "nombreProducto" : "Monopoly",
+  "marca" : "Hasbro",
+  "descripcion" : "Juego de mesa, 2 a 6 jugadores",
+  "precio" : 20000,
+  "subCategoria" : "JUGUETES",
+  "categoria" : "ENTRETENIMIENTO",
+  "id" : 109,
+  "stock" : 31
+}, {
+  "nombreProducto" : "Pelota de futbol",
+  "marca" : "Nike",
+  "descripcion" : "Pelota de futbol, talle 5",
+  "precio" : 20000,
+  "subCategoria" : "JUGUETES",
+  "categoria" : "ENTRETENIMIENTO",
+  "id" : 110,
+  "stock" : 20
+}, {
+  "nombreProducto" : "Calefactor",
+  "marca" : "Longvie",
+  "descripcion" : "Calefactor de 2000w, 2 niveles de temperatura",
+  "precio" : 30000,
+  "subCategoria" : "CALEFACCION",
+  "categoria" : "ELECTRODOMESTICO",
+  "id" : 111,
+  "stock" : 10
+}, {
+  "nombreProducto" : "Aspiradora",
+  "marca" : "Atma",
+  "descripcion" : "Aspiradora de gran potencia",
+  "precio" : 20000,
+  "subCategoria" : "LIMPIEZA",
+  "categoria" : "ELECTRODOMESTICO",
+  "id" : 112,
+  "stock" : 20
+}, {
+  "nombreProducto" : "Televisor",
+  "marca" : "Samsung",
+  "descripcion" : "Televisor 32 pulgadas, HD",
+  "precio" : 50000,
+  "subCategoria" : "TELEVISION",
+  "categoria" : "ELECTRODOMESTICO",
+  "id" : 113,
+  "stock" : 30
+}, {
+  "nombreProducto" : "Televisor",
+  "marca" : "Hitachi",
+  "descripcion" : "Televisor 50 pulgadas, 4k",
+  "precio" : 150000,
+  "subCategoria" : "TELEVISION",
+  "categoria" : "ELECTRODOMESTICO",
+  "id" : 114,
+  "stock" : 37
+}, {
+  "nombreProducto" : "Cafetera",
+  "marca" : "Philips",
+  "descripcion" : "Cafetera de 1.5 litros, 12 tazas",
+  "precio" : 30000,
+  "subCategoria" : "COCINA",
+  "categoria" : "HOGAR",
+  "id" : 115,
+  "stock" : 40
+}, {
+  "nombreProducto" : "Lampara",
+  "marca" : "Philips",
+  "descripcion" : "Lampara de pie, 1.5 metros",
+  "precio" : 15000,
+  "subCategoria" : "ILUMINACION",
+  "categoria" : "HOGAR",
+  "id" : 116,
+  "stock" : 20
+}, {
+  "nombreProducto" : "Cuadro",
+  "marca" : "Cuadros Argentinos",
+  "descripcion" : "Cuadro de 1 metro x 1 metro",
+  "precio" : 17000,
+  "subCategoria" : "DECORACION",
+  "categoria" : "HOGAR",
+  "id" : 117,
+  "stock" : 12
+}, {
+  "nombreProducto" : "Parrilla",
+  "marca" : "Parrillas Argentinas",
+  "descripcion" : "Parrilla de 1 metro x 1 metro al carbon con ruedas",
+  "precio" : 50000,
+  "subCategoria" : "JARDIN",
+  "categoria" : "HOGAR",
+  "id" : 118,
+  "stock" : 20
+}, {
+  "nombreProducto" : "Camisa",
+  "marca" : "Ralph Lauren",
+  "descripcion" : "Camisa de vestir, talle M",
+  "precio" : 20000,
+  "subCategoria" : "CAMISA",
+  "categoria" : "MODA",
+  "id" : 119,
+  "stock" : 30
+}, {
+  "nombreProducto" : "Campera",
+  "marca" : "Nike",
+  "descripcion" : "Campera de abrigo, talle M, color negro, masculina",
+  "precio" : 45000,
+  "subCategoria" : "ABRIGO",
+  "categoria" : "MODA",
+  "id" : 120,
+  "stock" : 160
+}, {
+  "nombreProducto" : "Campera",
+  "marca" : "Nike",
+  "descripcion" : "Campera de abrigo, talle L, color azul, masculina",
+  "precio" : 45000,
+  "subCategoria" : "ABRIGO",
+  "categoria" : "MODA",
+  "id" : 121,
+  "stock" : 12
+}, {
+  "nombreProducto" : "Campera",
+  "marca" : "Nike",
+  "descripcion" : "Campera de abrigo, talle S, color negro, femenina",
+  "precio" : 35000,
+  "subCategoria" : "ABRIGO",
+  "categoria" : "MODA",
+  "id" : 122,
+  "stock" : 163
+}   ]
