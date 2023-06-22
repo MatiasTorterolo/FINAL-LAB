@@ -17,8 +17,6 @@ public class GestionProducto implements Gestiones<Producto>{
     public void Mostrar() {
         this.productoRepo.listar().forEach(System.out::println);
     }
-
-
     public void Agregar(Producto objeto) {
         try {
             if (Existe(objeto)) {
@@ -31,8 +29,6 @@ public class GestionProducto implements Gestiones<Producto>{
             System.out.println("ERROR: " + e.getMessage());
         }
     }
-
-
     public boolean Existe(Producto objeto) {
         if (this.productoRepo.listar().contains(objeto)) {
             return true;
@@ -40,8 +36,6 @@ public class GestionProducto implements Gestiones<Producto>{
             return false;
         }
     }
-
-
     public void Eliminar(Producto objeto) {
         try {
             if (Existe(objeto)) {
@@ -53,9 +47,6 @@ public class GestionProducto implements Gestiones<Producto>{
             System.out.println("ERROR: " + e.getMessage());
         }
     }
-
-
-
     public void Modificar(Producto producto) {
         String bucle;
         String input;
@@ -93,7 +84,6 @@ public class GestionProducto implements Gestiones<Producto>{
              bucle = JOptionPane.showInputDialog("Desea modificar otro producto?");
         } while (bucle.equals("si"));
     }
-
     public int ultimoId() {
         int idUltimo=0;
         ArrayList<Producto> buscarUltimo = productoRepo.listar();

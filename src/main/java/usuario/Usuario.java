@@ -12,7 +12,6 @@ public  class Usuario implements Serializable {
     private int id;
     private String email;
     private String pass;
-
     private ArrayList<Producto> publicaciones=new ArrayList<>();
     private ArrayList<Producto> compras=new ArrayList<>();
 

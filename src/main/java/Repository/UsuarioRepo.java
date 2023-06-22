@@ -27,7 +27,6 @@ public class UsuarioRepo implements IRepository<Usuario>{
             this.Usuarios = new ArrayList<>();
         }
     }
-
     public void guardar() {
 
         try {
@@ -36,7 +35,6 @@ public class UsuarioRepo implements IRepository<Usuario>{
             throw new RuntimeException(e);
         }
     }
-
     public ArrayList<Usuario> listar() {
         cargar();
         return this.Usuarios;
@@ -52,7 +50,6 @@ public class UsuarioRepo implements IRepository<Usuario>{
         this.Usuarios.remove(usuario);
         guardar();
     }
-
     @Override
     public void Modificar(Usuario usuario) {
         cargar();
@@ -65,7 +62,6 @@ public class UsuarioRepo implements IRepository<Usuario>{
         }
         guardar();
     }
-
     public Usuario Buscar(int id) {
         cargar();
         for (Usuario usuarioEncontrado : Usuarios) {

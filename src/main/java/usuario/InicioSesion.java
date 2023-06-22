@@ -50,8 +50,6 @@ public class InicioSesion {
             }
         } while (bucle == 1);
     }
-
-
     public Usuario inicioSesion(String contrasenia, String mail) {
         if (usuarioRepo.listar() != null) {
             Usuario usuarioEncontrado = new Usuario();
@@ -66,9 +64,7 @@ public class InicioSesion {
             return null;
         }
     }
-
-
-public void ModificarUsuario(Usuario usuario){
+    public void ModificarUsuario(Usuario usuario){
         String bucle="no";
         do {
     String contra=JOptionPane.showInputDialog("Ingrese pass");

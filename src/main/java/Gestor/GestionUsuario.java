@@ -17,8 +17,6 @@ public class GestionUsuario {
     public  void Mostrar() {
         this.usuarioRepo.listar().forEach(System.out::println);
     }
-
-
     public void Agregar(Usuario objeto) {
         try {
             if (Existe(objeto)) {
@@ -30,8 +28,6 @@ public class GestionUsuario {
             System.out.println("ERROR: " + e.getMessage());
         }
     }
-
-
     public boolean Existe(Usuario objeto) {
         if (this.usuarioRepo.listar().contains(objeto)) {
             return true;
@@ -39,7 +35,6 @@ public class GestionUsuario {
             return false;
         }
     }
-
     public void Eliminar(Usuario objeto) {
         try {
             if (Existe(objeto)) {
@@ -51,9 +46,6 @@ public class GestionUsuario {
             System.out.println("ERROR: " + e.getMessage());
         }
     }
-
-
-
     public void Modificar(Usuario usuario) {
             System.out.println(usuario.toString());
             System.out.println("1: Modificar Nombre " + " 2: Modificar Direccion " + " 3: Modificar Pass" + " 4: Modificar Todo");
@@ -88,7 +80,6 @@ public class GestionUsuario {
                 System.out.println("No se modifico");
             }
     }
-
     public int ultimoId() {
         int idUltimo=0;
         ArrayList<Usuario> buscarUltimo=usuarioRepo.listar();

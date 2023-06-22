@@ -1,6 +1,6 @@
 [ {
   "nombreYapellido" : "rocky balboa",
-  "direccion" : "brooklin",
+  "direccion" : "Manhatan",
   "id" : 1,
   "email" : "rock@gmail.com",
   "pass" : "balboa321",
@@ -75,4 +75,4 @@
     "id" : 1,
     "stock" : 10
   } ]
-} ]
+}]

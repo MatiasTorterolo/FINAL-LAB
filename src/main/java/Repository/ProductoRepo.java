@@ -51,7 +51,6 @@ public class ProductoRepo implements IRepository<Producto> {
         this.listaProductos.remove(producto);
         guardar();
     }
-
     @Override
     public void Modificar(Producto producto) {
         cargar();
@@ -64,8 +63,6 @@ public class ProductoRepo implements IRepository<Producto> {
         }
         guardar();
     }
-
-
     public Producto Buscar(int id) {
        cargar();
         for (Producto productoEncontrado : this.listaProductos) {

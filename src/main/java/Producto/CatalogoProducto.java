@@ -19,12 +19,10 @@ public class CatalogoProducto  {
     public void Mostrar(Usuario usuario){
     String bucle;
         do {
-
             System.out.println("  Moda " + "  Hogar " + "  Tecnologia " + "  Entretenimiento " + "  Herramientas " + " Electrodomestico");
             String opcion = JOptionPane.showInputDialog("Seleccione categoria");
             switch (opcion.toLowerCase()) {
                 case "moda":
-
                     System.out.println(" Remera " + " Camisa " + " Pantalon " + " Abrigo " + " Zapatilla " + " r: retroceder ");
                     String ropa = JOptionPane.showInputDialog("Seleccione Categoria de Ropa");
                     switch (ropa.toLowerCase()) {
@@ -50,8 +48,6 @@ public class CatalogoProducto  {
                             System.out.println("opcion invalida. por favor, eliga una opcion valida. ");
 
                     }
-
-
                     break;
                 case "hogar":
                     System.out.println(" Iluminacion " + " Cocina " + " Decoracion " + " Jardin " + " r: retroceder ");
@@ -195,12 +191,6 @@ public class CatalogoProducto  {
         }while (bucle.equals("si"));
         }
 
-
-
-
-
-
-
     public void Recorrer(Producto.Tipo categoria, Producto.SubTipo subCategoria) {
 
 
@@ -217,8 +207,6 @@ public class CatalogoProducto  {
             }
         }
     }
-
-
 
     public void MostrarCarrito(){
         if(this.carrito==null){
