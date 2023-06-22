@@ -134,11 +134,11 @@ public class Producto implements Serializable {
     public String toString() {
         return "---------------------------" + '\n' +
                 "Producto:" + '\n' +
-                "ID=" + id + '\n' +
-                "nombreProducto=" + nombreProducto + '\n' +
-                "marca=" + marca + '\n' +
-                "descripcion=" + descripcion + '\n' +
-                "precio=" + precio + '\n' +
+                "ID: " + id + '\n' +
+                "Nombre: " + nombreProducto + '\n' +
+                "Marca: " + marca + '\n' +
+                "Descripcion: " + descripcion + '\n' +
+                "Precio = $" + precio + '\n' +
                 "---------------------------" +
                 '\n';
     }
