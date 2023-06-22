@@ -85,10 +85,10 @@ public class CatalogoProducto  {
                         case "celulares":
                             Recorrer(Producto.Tipo.TECNOLOGIA, Producto.SubTipo.CELULARES);
                             break;
-                        case "camara":
+                        case "camaras":
                             Recorrer(Producto.Tipo.TECNOLOGIA, Producto.SubTipo.CAMARAS);
                             break;
-                        case "consola":
+                        case "consolas":
                             Recorrer(Producto.Tipo.TECNOLOGIA, Producto.SubTipo.CONSOLAS);
                             break;
                         case "r":

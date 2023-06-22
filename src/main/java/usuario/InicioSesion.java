@@ -15,12 +15,14 @@ public class InicioSesion {
     public void Registro() {
         int flag = 0;
         int bucle = 0;
+        int flag1=0;
         do {
             Usuario usuario = new Usuario();
             String nombreYapellido = JOptionPane.showInputDialog("Ingrese nombre y apellido");
             String direccion = JOptionPane.showInputDialog("Ingrese direccion");
-            String mail = JOptionPane.showInputDialog("Ingrese e-mail");
+            String mail;
             do {
+                 mail = JOptionPane.showInputDialog("Ingrese e-mail");
                 try {
                     if (mail.contains("@") && mail.contains(".com")) {
                         System.out.println("e-mail valido");
@@ -32,7 +34,20 @@ public class InicioSesion {
                     System.out.println("ERROR: " + e.getMessage());
                 }
             } while (flag == 0);
-            String pass = JOptionPane.showInputDialog("Ingrese contraseña");
+            String pass;
+        do {
+            pass = JOptionPane.showInputDialog("Ingrese contraseña. la contraseña debe contener al menos 8 caracteres, ul menos mayuscula y un digito");
+            if(verificarContrasena(pass)){
+                System.out.println("Pass valida");
+                flag1=1;
+
+            }else {
+                System.out.println("ERROR: la contraseña debe contener al menos 8 caracteres, ul menos mayuscula y un digito");
+
+            }
+
+        }while (flag1==0);
+
             int id = gestionUsuario.ultimoId() + 1;
             usuario.setPass(pass);
             usuario.setDireccion(direccion);
@@ -50,6 +65,12 @@ public class InicioSesion {
             }
         } while (bucle == 1);
     }
+
+    public boolean verificarContrasena(String pass) {
+        String patron = "^(?=.*[A-Z])(?=.*\\d).{8,}$";
+        return pass.matches(patron);
+    }
+
     public Usuario inicioSesion(String contrasenia, String mail) {
         if (usuarioRepo.listar() != null) {
             Usuario usuarioEncontrado = new Usuario();

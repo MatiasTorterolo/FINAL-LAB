@@ -83,4 +83,12 @@
   "pass" : "fernando500",
   "publicaciones" : [ ],
   "compras" : [ ]
+}, {
+  "nombreYapellido" : "jony",
+  "direccion" : "cartoon network",
+  "id" : 6,
+  "email" : "jony@gmail.com",
+  "pass" : "Joni12345$",
+  "publicaciones" : [ ],
+  "compras" : [ ]
 } ]
