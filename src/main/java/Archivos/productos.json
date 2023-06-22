@@ -66,7 +66,7 @@
   "marca" : "Canon",
   "descripcion" : "Camara profesional, 20 megapixeles",
   "precio" : 100000,
-  "subCategoria" : "CAMARA",
+  "subCategoria" : "CAMARAS",
   "categoria" : "TECNOLOGIA",
   "id" : 105,
   "stock" : 10
@@ -75,7 +75,7 @@
   "marca" : "Sony",
   "descripcion" : "Play station 5, 1 tb, 4k",
   "precio" : 400000,
-  "subCategoria" : "CONSOLA",
+  "subCategoria" : "CONSOLAS",
   "categoria" : "TECNOLOGIA",
   "id" : 106,
   "stock" : 15
@@ -84,7 +84,7 @@
   "marca" : "Sony",
   "descripcion" : "Play station 4, 500 gb, HD",
   "precio" : 150000,
-  "subCategoria" : "CONSOLA",
+  "subCategoria" : "CONSOLAS",
   "categoria" : "TECNOLOGIA",
   "id" : 107,
   "stock" : 80
