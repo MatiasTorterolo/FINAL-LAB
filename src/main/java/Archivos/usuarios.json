@@ -5,16 +5,25 @@
   "email" : "rock@gmail.com",
   "pass" : "balboa321",
   "publicaciones" : [ {
-    "nombreProducto" : "moto E13",
-    "marca" : "motorola",
-    "descripcion" : "2 gb ram, memoria internar 64, pantalla 6.5",
-    "precio" : 46176.0,
-    "subCategoria" : "CELULARES",
+    "nombreProducto" : "teclado y mousse",
+    "marca" : "noga",
+    "descripcion" : "teclado y mouse rgb",
+    "precio" : 985000.0,
+    "subCategoria" : "COMPUTACION",
     "categoria" : "TECNOLOGIA",
-    "id" : 1,
-    "stock" : 12
+    "id" : 124,
+    "stock" : 60
   } ],
-  "compras" : null
+  "compras" : [ {
+    "nombreProducto" : "Zapatillas",
+    "marca" : "Nike",
+    "descripcion" : "Zapatillas blancas talle 40, masculinas",
+    "precio" : 50000.0,
+    "subCategoria" : "ZAPATILLA",
+    "categoria" : "MODA",
+    "id" : 102,
+    "stock" : 10
+  } ]
 }, {
   "nombreYapellido" : "pepe argento",
   "direccion" : "nomeacuerdo 432",
@@ -91,4 +100,38 @@
   "pass" : "Joni12345$",
   "publicaciones" : [ ],
   "compras" : [ ]
+}, {
+  "nombreYapellido" : "nathan drake",
+  "direccion" : "las habanas",
+  "id" : 7,
+  "email" : "nathan@gmail.com",
+  "pass" : "Uncharted1~",
+  "publicaciones" : [ {
+    "nombreProducto" : "All star",
+    "marca" : "Adidas",
+    "descripcion" : "Adidas blancas talle 36, Femenina",
+    "precio" : 800000.0,
+    "subCategoria" : "ZAPATILLA",
+    "categoria" : "MODA",
+    "id" : 123,
+    "stock" : 45
+  } ],
+  "compras" : [ ]
+}, {
+  "nombreYapellido" : "harry potter",
+  "direccion" : "howarts",
+  "id" : 8,
+  "email" : "harry@gmail.com",
+  "pass" : "Leviusa45$",
+  "publicaciones" : [ ],
+  "compras" : [ {
+    "nombreProducto" : "Play Station 5",
+    "marca" : "Sony",
+    "descripcion" : "Play station 5, 1 tb, 4k",
+    "precio" : 400000.0,
+    "subCategoria" : "CONSOLAS",
+    "categoria" : "TECNOLOGIA",
+    "id" : 106,
+    "stock" : 14
+  } ]
 } ]
