@@ -6,6 +6,7 @@ import usuario.InicioSesion;
 import usuario.Usuario;
 
 import javax.swing.*;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,7 +24,7 @@ public class Main {
             switch (opcion) {
                 case 1:
                     String mail = JOptionPane.showInputDialog("INGRESE E-MAIL");
-                    String contra = JOptionPane.showInputDialog("INGRESE PASS");
+                    String contra= inicioSesion.obtenerContrasena();
                     usuario = inicioSesion.inicioSesion(contra, mail);
                     if (usuario.getNombreYapellido() == null) {
                         System.out.println("Usuario no registrado o verifique bien los datos");
@@ -115,4 +116,6 @@ public class Main {
              bucle=JOptionPane.showInputDialog("Desea continuar en el inicio de sesion?...");
         }while (bucle.equalsIgnoreCase("si"));
     }
+
+
 }

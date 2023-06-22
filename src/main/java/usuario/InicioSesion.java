@@ -4,6 +4,7 @@ import Gestor.GestionUsuario;
 import Repository.UsuarioRepo;
 
 import javax.swing.*;
+import java.util.Arrays;
 
 public class InicioSesion {
     GestionUsuario gestionUsuario = new GestionUsuario();
@@ -85,6 +86,9 @@ public class InicioSesion {
             return null;
         }
     }
+
+
+
     public void ModificarUsuario(Usuario usuario){
         String bucle="no";
         do {
@@ -98,5 +102,9 @@ public class InicioSesion {
     }while (bucle.equalsIgnoreCase("si"));
 }
 
-
+    public  String obtenerContrasena() {
+        JPasswordField passwordField = new JPasswordField();
+        JOptionPane.showConfirmDialog(null, passwordField, "INGRESE PASS:", JOptionPane.OK_CANCEL_OPTION);
+        return new String(passwordField.getPassword());
+    }
 }
