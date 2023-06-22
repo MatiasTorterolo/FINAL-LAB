@@ -39,7 +39,7 @@
   "marca" : "Nike",
   "descripcion" : "Zapatillas blancas talle 40, masculinas",
   "precio" : 50000,
-  "subCategoria" : "ZAPATILLAS",
+  "subCategoria" : "ZAPATILLA",
   "categoria" : "MODA",
   "id" : 102,
   "stock" : 10
@@ -223,4 +223,4 @@
   "categoria" : "MODA",
   "id" : 122,
   "stock" : 163
-}   ]
+}]
