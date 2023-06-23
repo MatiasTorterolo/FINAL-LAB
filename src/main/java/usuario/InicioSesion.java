@@ -37,13 +37,13 @@ public class InicioSesion {
             } while (flag == 0);
             String pass;
         do {
-            pass = JOptionPane.showInputDialog("Ingrese contraseña. la contraseña debe contener al menos 8 caracteres, ul menos mayuscula y un digito");
+            pass = JOptionPane.showInputDialog("Ingrese contraseña. la contraseña debe contener al menos 8 caracteres, una mayuscula y un caracter especial");
             if(verificarContrasena(pass)){
                 System.out.println("Pass valida");
                 flag1=1;
 
             }else {
-                System.out.println("ERROR: la contraseña debe contener al menos 8 caracteres, ul menos mayuscula y un digito");
+                System.out.println("ERROR: la contraseña debe contener al menos 8 caracteres, una mayuscula y un caracter especial");
 
             }
 

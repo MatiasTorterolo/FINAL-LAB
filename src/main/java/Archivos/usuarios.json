@@ -1,6 +1,6 @@
 [ {
   "nombreYapellido" : "rocky balboa",
-  "direccion" : "Manhatan",
+  "direccion" : "manhatan 3000",
   "id" : 1,
   "email" : "rock@gmail.com",
   "pass" : "balboa321",
@@ -23,6 +23,15 @@
     "categoria" : "MODA",
     "id" : 102,
     "stock" : 10
+  }, {
+    "nombreProducto" : "IPhone 12",
+    "marca" : "Apple",
+    "descripcion" : "4 gb ram, memoria internar 512, pantalla 6",
+    "precio" : 300000.0,
+    "subCategoria" : "CELULARES",
+    "categoria" : "TECNOLOGIA",
+    "id" : 104,
+    "stock" : 105
   } ]
 }, {
   "nombreYapellido" : "pepe argento",
@@ -47,17 +56,17 @@
   "id" : 3,
   "email" : "mati@gmail.com",
   "pass" : "mati123",
-  "publicaciones" : [ {
-    "nombreProducto" : "campera thor navy",
-    "marca" : "navy",
-    "descripcion" : "campera negra talle L, masculina",
-    "precio" : 57990.0,
-    "subCategoria" : "REMERA",
-    "categoria" : "MODA",
-    "id" : 2,
-    "stock" : 4
-  } ],
-  "compras" : [ ]
+  "publicaciones" : [ ],
+  "compras" : [ {
+    "nombreProducto" : "teclado y mousse",
+    "marca" : "noga",
+    "descripcion" : "teclado y mouse rgb",
+    "precio" : 985000.0,
+    "subCategoria" : "COMPUTACION",
+    "categoria" : "TECNOLOGIA",
+    "id" : 124,
+    "stock" : 59
+  } ]
 }, {
   "nombreYapellido" : "francias segundo",
   "direccion" : "pechofrio 432",

@@ -15,23 +15,27 @@ public class Main {
         Venta venta = new Venta();
 
         ProductoRepo producotoRepo = new ProductoRepo();
-        String bucle = null;
-        int flag = 0;
+        String bucle = "si";
+        int flag=0;
         Usuario usuario = new Usuario();
         do {
             String opciones = JOptionPane.showInputDialog("1:Iniciar sesion     2:Registrarse");
             int opcion = Integer.parseInt(opciones);
             switch (opcion) {
                 case 1:
+
                     String mail = JOptionPane.showInputDialog("INGRESE E-MAIL");
-                    String contra= inicioSesion.obtenerContrasena();
+                    String contra = inicioSesion.obtenerContrasena();
                     usuario = inicioSesion.inicioSesion(contra, mail);
                     if (usuario.getNombreYapellido() == null) {
                         System.out.println("Usuario no registrado o verifique bien los datos");
+                        flag=1;
+
                     } else {
                         System.out.println("BIENVENIDO " + usuario.getNombreYapellido());
+                        flag=0;
                         do {
-                            opciones = JOptionPane.showInputDialog("1: Ver productos    2: Publicar Producto    3:Mostrar Productos publicados     4:Historial de compras       5:Eliminar publicacion       6:Ir a carrito      7:Modificar datos de perfil       8:Ver perfil     0:Cerrar sesion ");
+                            opciones = JOptionPane.showInputDialog("1: Ver productos\n2: Publicar Producto\n3: Mostrar Productos publicados\n4: Historial de compras\n5: Eliminar publicacion\n6: Ir a carrito\n7: Modificar datos de perfil\n8: Ver perfil\n0: Cerrar sesion ");
                             opcion = Integer.parseInt(opciones);
                             switch (opcion) {
                                 case 1:
@@ -51,9 +55,9 @@ public class Main {
                                     }
                                     break;
                                 case 5:
-                                    if(usuario.getPublicaciones()==null){
+                                    if (usuario.getPublicaciones() == null) {
                                         System.out.println("NO SE REGISTRAN PUBLICACIONES");
-                                    }else {
+                                    } else {
                                         venta.MostrarPublicaciones(usuario);
                                         String input = JOptionPane.showInputDialog("Ingrese id del producto que desea eliminar");
                                         int id = Integer.parseInt(input);
@@ -67,23 +71,23 @@ public class Main {
                                     break;
                                 case 6:
                                     catalogoProducto.MostrarCarrito();
-                                    opciones=JOptionPane.showInputDialog("Desea Eliminar producto del carrito?");
+                                    opciones = JOptionPane.showInputDialog("Desea Eliminar un producto del carrito?");
 
-                                        if (opciones.equalsIgnoreCase("si")) {
-                                            do{
+                                    if (opciones.equalsIgnoreCase("si")) {
+                                        do {
                                             String input = JOptionPane.showInputDialog("Ingrese id del producto que desea eliminar");
                                             int id = Integer.parseInt(input);
                                             catalogoProducto.EliminarProductoCarrito(producotoRepo.Buscar(id));
                                             catalogoProducto.MostrarCarrito();
                                             bucle = JOptionPane.showInputDialog("desea eliminar otro producto");
-                                        }while (bucle.equalsIgnoreCase("si"));
-                                        }
+                                        } while (bucle.equalsIgnoreCase("si"));
+                                    }
 
-                                            opciones = JOptionPane.showInputDialog("Desea comprar");
-                                            if (opciones.equalsIgnoreCase("si")) {
-                                                catalogoProducto.PagarCarrito(usuario);
-                                                System.out.println("Productos comprados");
-                                            }
+                                    opciones = JOptionPane.showInputDialog("Desea comprar");
+                                    if (opciones.equalsIgnoreCase("si")) {
+                                        catalogoProducto.PagarCarrito(usuario);
+                                        System.out.println("Productos comprados");
+                                    }
 
                                     break;
                                 case 7:
@@ -93,28 +97,26 @@ public class Main {
                                     System.out.println(usuario.toString());
                                     break;
                                 case 0:
-                                    flag=1;
-                                    bucle="no";
+
+                                    bucle = "no";
                                     break;
                                 default:
                                     System.out.println("Ingrese una opcion valida");
-
                             }
-                            if(flag==0){
-                                bucle=JOptionPane.showInputDialog("Desea continuar?");
-                            }
-                        }while (bucle.equalsIgnoreCase("si"));
 
-
+                        } while (bucle.equalsIgnoreCase("si"));
                     }
                     break;
                 case 2:
                     inicioSesion.Registro();
                     break;
             }
-             bucle=JOptionPane.showInputDialog("Desea continuar en el inicio de sesion?...");
-        }while (bucle.equalsIgnoreCase("si"));
+        }while (flag==1);
     }
-
-
 }
+
+
+
+
+
+

@@ -8,15 +8,6 @@
   "id" : 1,
   "stock" : 10
 }, {
-  "nombreProducto" : "campera thor navy",
-  "marca" : "navy",
-  "descripcion" : "campera negra talle L, masculina",
-  "precio" : 57990.0,
-  "subCategoria" : "REMERA",
-  "categoria" : "MODA",
-  "id" : 2,
-  "stock" : 90
-}, {
   "nombreProducto" : "Jean",
   "marca" : "Levis",
   "descripcion" : "Jean azul talle 40, masculino",
@@ -60,7 +51,7 @@
   "subCategoria" : "CELULARES",
   "categoria" : "TECNOLOGIA",
   "id" : 104,
-  "stock" : 106
+  "stock" : 105
 }, {
   "nombreProducto" : "Camara",
   "marca" : "Canon",
@@ -240,5 +231,5 @@
   "subCategoria" : "COMPUTACION",
   "categoria" : "TECNOLOGIA",
   "id" : 124,
-  "stock" : 60
+  "stock" : 59
 } ]

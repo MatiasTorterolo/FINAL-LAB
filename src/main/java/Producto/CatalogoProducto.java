@@ -159,7 +159,7 @@ public class CatalogoProducto  {
 
             }
             String comprar = JOptionPane.showInputDialog("Ingrese ID del producto que desea comprar. 's' para seguir comprando");
-            if (comprar.equals("s")) {
+            if (comprar.equalsIgnoreCase("s")) {
                  bucle = "si";
             } else {
                 bucle="no";
