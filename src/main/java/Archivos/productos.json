@@ -15,7 +15,7 @@
   "subCategoria" : "PANTALON",
   "categoria" : "MODA",
   "id" : 100,
-  "stock" : 20
+  "stock" : 19
 }, {
   "nombreProducto" : "Remera",
   "marca" : "Levis",
@@ -69,7 +69,7 @@
   "subCategoria" : "CONSOLAS",
   "categoria" : "TECNOLOGIA",
   "id" : 106,
-  "stock" : 14
+  "stock" : 13
 }, {
   "nombreProducto" : "Play Station 4",
   "marca" : "Sony",
@@ -223,13 +223,4 @@
   "categoria" : "MODA",
   "id" : 123,
   "stock" : 45
-}, {
-  "nombreProducto" : "teclado y mousse",
-  "marca" : "noga",
-  "descripcion" : "teclado y mouse rgb",
-  "precio" : 985000.0,
-  "subCategoria" : "COMPUTACION",
-  "categoria" : "TECNOLOGIA",
-  "id" : 124,
-  "stock" : 59
 } ]

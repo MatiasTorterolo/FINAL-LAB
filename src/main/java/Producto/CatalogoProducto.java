@@ -19,11 +19,11 @@ public class CatalogoProducto  {
     public void Mostrar(Usuario usuario){
     String bucle;
         do {
-            System.out.println("  Moda " + "  Hogar " + "  Tecnologia " + "  Entretenimiento " + "  Herramientas " + " Electrodomestico");
+            System.out.println("  Moda \n" + "  Hogar \n" + "  Tecnologia \n" + "  Entretenimiento \n" + "  Herramientas \n" + "  Electrodomestico\n");
             String opcion = JOptionPane.showInputDialog("Seleccione categoria");
             switch (opcion.toLowerCase()) {
                 case "moda":
-                    System.out.println(" Remera " + " Camisa " + " Pantalon " + " Abrigo " + " Zapatilla " + " r: retroceder ");
+                    System.out.println(" Remera \n" + " Camisa \n" + " Pantalon \n" + " Abrigo \n" + " Zapatilla \n" + " r: retroceder \n");
                     String ropa = JOptionPane.showInputDialog("Seleccione Categoria de Ropa");
                     switch (ropa.toLowerCase()) {
                         case "remera":
@@ -50,7 +50,7 @@ public class CatalogoProducto  {
                     }
                     break;
                 case "hogar":
-                    System.out.println(" Iluminacion " + " Cocina " + " Decoracion " + " Jardin " + " r: retroceder ");
+                    System.out.println(" Iluminacion \n" + " Cocina \n" + " Decoracion \n" + " Jardin \n" + " r: retroceder \n");
                     String hogar = JOptionPane.showInputDialog("Seleccione Categoria de Hogar");
                     switch (hogar.toLowerCase()) {
                         case "iluminacion":
@@ -76,7 +76,7 @@ public class CatalogoProducto  {
                     break;
 
                 case "tecnologia":
-                    System.out.println(" Computacion " + " Celulares " + " Camaras " + " Consolas " + " r: retroceder ");
+                    System.out.println(" Computacion \n" + " Celulares \n" + " Camaras \n" + " Consolas \n" + " r: retroceder \n");
                     String tecnologia = JOptionPane.showInputDialog("Seleccione Categoria de Tecnologia");
                     switch (tecnologia.toLowerCase()) {
                         case "computacion":
@@ -101,7 +101,7 @@ public class CatalogoProducto  {
                     break;
 
                 case "entretenimiento":
-                    System.out.println(" Juguetes " + " Libros " + " Hobby " + " r: retroceder ");
+                    System.out.println(" Juguetes \n" + " Libros \n" + " Hobby \n" + " r: retroceder \n");
                     String entretenimiento = JOptionPane.showInputDialog("Seleccione Categoria de Entretenimiento");
                     switch (entretenimiento.toLowerCase()) {
                         case "juguetes":
@@ -123,7 +123,7 @@ public class CatalogoProducto  {
                     break;
 
                 case "electrodomestico":
-                    System.out.println(" Calefaccion " + " Limpieza " + " Television " + " R: retroceder ");
+                    System.out.println(" Calefaccion \n" + " Limpieza \n" + " Television \n" + " R: retroceder \n");
                     String electroDomesticos = JOptionPane.showInputDialog("Seleccione Categoria de ElectroDomesticos");
                     switch (electroDomesticos.toLowerCase()) {
                         case "calefaccion":
@@ -155,6 +155,8 @@ public class CatalogoProducto  {
                         }
                     }
                     break;
+                default:
+                    System.out.println("opcion invalida. por favor, eliga una opcion valida. ");
 
 
             }

@@ -1,19 +1,10 @@
 [ {
-  "nombreYapellido" : "rocky balboa",
+  "nombreYapellido" : "roky",
   "direccion" : "manhatan 3000",
   "id" : 1,
   "email" : "rock@gmail.com",
   "pass" : "balboa321",
-  "publicaciones" : [ {
-    "nombreProducto" : "teclado y mousse",
-    "marca" : "noga",
-    "descripcion" : "teclado y mouse rgb",
-    "precio" : 985000.0,
-    "subCategoria" : "COMPUTACION",
-    "categoria" : "TECNOLOGIA",
-    "id" : 124,
-    "stock" : 60
-  } ],
+  "publicaciones" : [ ],
   "compras" : [ {
     "nombreProducto" : "Zapatillas",
     "marca" : "Nike",
@@ -32,6 +23,24 @@
     "categoria" : "TECNOLOGIA",
     "id" : 104,
     "stock" : 105
+  }, {
+    "nombreProducto" : "Jean",
+    "marca" : "Levis",
+    "descripcion" : "Jean azul talle 40, masculino",
+    "precio" : 410000.0,
+    "subCategoria" : "PANTALON",
+    "categoria" : "MODA",
+    "id" : 100,
+    "stock" : 19
+  }, {
+    "nombreProducto" : "Play Station 5",
+    "marca" : "Sony",
+    "descripcion" : "Play station 5, 1 tb, 4k",
+    "precio" : 400000.0,
+    "subCategoria" : "CONSOLAS",
+    "categoria" : "TECNOLOGIA",
+    "id" : 106,
+    "stock" : 13
   } ]
 }, {
   "nombreYapellido" : "pepe argento",
@@ -143,4 +152,12 @@
     "id" : 106,
     "stock" : 14
   } ]
+}, {
+  "nombreYapellido" : "pepe",
+  "direccion" : "argento",
+  "id" : 9,
+  "email" : "casadosconhijos@gmail.com",
+  "pass" : "Casados8$",
+  "publicaciones" : [ ],
+  "compras" : [ ]
 } ]

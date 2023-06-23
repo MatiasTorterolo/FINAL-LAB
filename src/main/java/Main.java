@@ -109,6 +109,7 @@ public class Main {
                     break;
                 case 2:
                     inicioSesion.Registro();
+                    flag=1;
                     break;
             }
         }while (flag==1);
